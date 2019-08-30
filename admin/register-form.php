@@ -186,7 +186,7 @@ if ( isset( $_POST[ 'eventsubmit' ] ) ) {
 				<div class="col-sm-12">
 					<div class="white-box">
 						<form data-toggle="validator" method="post">
-							<h3 class="box-title m-b-0">Fest Details</h3>
+							<h3 class="box-title m-b-0">MCA details</h3>
 							<hr>
 							<div class="row">
 								<div class="col-md-12">
