@@ -25,7 +25,9 @@ var KTFormControls = function () {
                 },
                 phone: {
                     required: true,
-                    phoneUS: true 
+                    digits: true,
+					maxlength: 10,
+					minlength: 10
                 },
                 option: {
                     required: true
@@ -49,6 +51,10 @@ var KTFormControls = function () {
                     minlength: 1,
                     maxlength: 2
                 },
+				talent: {
+					required: true,
+					minlength: 1
+				},
                 radio: {
                     required: true
                 }
@@ -129,6 +135,7 @@ var KTFormControls = function () {
 
                 event.preventDefault();
             },
+
 
             submitHandler: function (form) {
                 //form[0].submit(); // submit the form

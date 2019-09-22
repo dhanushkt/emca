@@ -22,19 +22,21 @@
 						<div class="kt-login__container">
 							<div class="kt-login__logo">
 								<a href="#">
-									<img src="assets/media/logos/logo-5.png">
+									<img width="400" height="160" src="assets/media/logos/samca.png">
 								</a>
 							</div>
+<!--
 							<div class="kt-login__signin">
 								<div class="kt-login__head">
 									<h3 class="kt-login__title">Sign In To Admin</h3>
 								</div>
 								
 							</div>
+-->
 							
 						</div>
 					</div>
-				<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid" style="padding: 50px;">
+				<div class="kt-container kt-login  kt-container--fluid  kt-grid__item kt-grid__item--fluid" style="padding: 50px;">
 					<div class="row">
 						<div class="col-12">
 							<!--begin::Portlet-->
@@ -48,71 +50,141 @@
 								</div>
 
 								<!--begin::Form-->
-								<form  class="kt-form kt-form--label-right">
+								<form  class="kt-form kt-form--label-right" id="kt_form_1" >
 									<div class="kt-portlet__body">
+										<div class="form-group form-group-last kt-hide">
+													<div class="alert alert-danger" role="alert" id="kt_form_1_msg">
+														<div class="alert-icon"><i class="flaticon-warning"></i></div>
+														<div class="alert-text">
+															Oh snap! Change a few things up and try submitting again.
+														</div>
+														<div class="alert-close">
+															<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+																<span aria-hidden="true"><i class="la la-close"></i></span>
+															</button>
+														</div>
+													</div>
+												</div>
 										<div class="form-group row">
 											<div class="col-lg-6">
 												<label>First Name:</label>
-												<input type="email" class="form-control" placeholder="Enter full name">
-												<span class="form-text text-muted">Please enter your full name</span>
+												<div class="input-group">
+													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-user"></i></a></div>
+													
+													<input required type="text" name="fname" class="form-control" placeholder="Enter first name">
+												</div>
 											</div>
 											<div class="col-lg-6">
 												<label>Last Name:</label>
-												<input type="email" class="form-control" placeholder="Enter full name">
-												<span class="form-text text-muted">Please enter your full name</span>
+												<div class="input-group">
+													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-user"></i></a></div>
+													
+													<input required type="text" name="lname" class="form-control" placeholder="Enter last name">
+												</div>
 											</div>
-											<div class="col-lg-6">
-												<label class="">Contact Number:</label>
-												<input type="email" class="form-control" placeholder="Enter contact number">
-												<span class="form-text text-muted">Please enter your contact number</span>
-											</div>
+											
 										</div>
 										<div class="form-group row">
 											<div class="col-lg-6">
-												<label>Address:</label>
-												<div class="kt-input-icon">
-													<input type="text" class="form-control" placeholder="Enter your address">
-													<span class="kt-input-icon__icon kt-input-icon__icon--right"><span><i class="la la-map-marker"></i></span></span>
+												<label class="">Email:</label>
+												<div class="input-group">
+												<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-envelope"></i></a></div>
+												<input type="email" class="form-control" placeholder="Enter Email address">
 												</div>
-												<span class="form-text text-muted">Please enter your address</span>
+<!--						<span class="form-text text-muted">Please enter your contact number</span>-->
 											</div>
 											<div class="col-lg-6">
-												<label class="">Postcode:</label>
-												<div class="kt-input-icon">
-													<input type="text" class="form-control" placeholder="Enter your postcode">
-													<span class="kt-input-icon__icon kt-input-icon__icon--right"><span><i class="la la-bookmark-o"></i></span></span>
+												<label class="">Phone Number:</label>
+												<div class="input-group">
+													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-phone"></i></a></div>
+													<input required type="text" class="form-control" name="phone" placeholder="Enter phone">
 												</div>
-												<span class="form-text text-muted">Please enter your postcode</span>
+							
 											</div>
 										</div>
 										<div class="form-group row">
-											<div class="col-lg-6">
-												<label>User Group:</label>
-												<div class="kt-radio-inline">
-													<label class="kt-radio kt-radio--solid">
-																				<input type="radio" name="example_2" checked value="2"> Sales Person
-																				<span></span>
-																			</label>
-
-													<label class="kt-radio kt-radio--solid">
-																				<input type="radio" name="example_2" value="2"> Customer
-																				<span></span>
-																			</label>
-
+											<div class="col-lg-12">
+												<label class="">Roll Number or USN: </label>
+												<div class="input-group">
+													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-mortar-board"></i></a></div>
+													<input required type="text" class="form-control" name="usn" placeholder="Enter roll number or usn">
 												</div>
-												<span class="form-text text-muted">Please select user group</span>
+											</div>
+										</div>
+										<hr>
+										<div class="form-group row">
+											<div class="col-lg-12">
+												<label>Talents: </label>
+												<div class="form-group form-group-last">
+													<div class="alert alert-secondary" role="alert">
+														<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+														<div class="alert-text">
+															Select atleast any one of the talent or hobbies in which you are good at. <br> provide more details (eg: dance form) in additional info box. 
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12 col-sm-12">
+														<div class="kt-checkbox-list">
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Dance
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Music
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Singing 
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Sports
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Art 
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Photography 
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Video or Audio Editing 
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent"> Graphic or Logo Designing
+																<span></span>
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent">  
+																<span></span> Coding / Web Development
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent">  
+																<span></span> Calligraphy
+															</label>
+															<label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+																<input type="checkbox" name="talent">  
+																<span></span> Anchoring / MC
+															</label>
+														</div>
+<!--<span class="form-text text-muted">Please select at lease 1</span>-->
+												</div>
+												<div class="form-group form-group-last" style="padding-top: 10px;">
+													<label for="exampleTextarea">Additional info / other talents: </label>
+													<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+												</div>
 											</div>
 										</div>
 									</div>
 									<div class="kt-portlet__foot">
 										<div class="kt-form__actions">
 											<div class="row">
-												<div class="col-lg-6">
-													<button type="reset" class="btn btn-primary">Save</button>
-													<button type="reset" class="btn btn-secondary">Cancel</button>
-												</div>
-												<div class="col-lg-6 kt-align-right">
-													<button type="reset" class="btn btn-danger">Delete</button>
+												<div class="col-lg-12 kt-align-center">
+													<button type="submit" class="btn btn-primary">Submit</button>
+<!--												<button type="reset" class="btn btn-secondary">Cancel</button>-->
 												</div>
 											</div>
 										</div>
@@ -137,7 +209,7 @@
 
 		<!--begin::Page Scripts(used by this page) -->
 		<script src="assets/js/pages/custom/login/login-general.js" type="text/javascript"></script>
-
+		<script src="assets/js/pages/crud/forms/validation/form-controls.js" type="text/javascript"></script>
 		<!--end::Page Scripts -->
 	</body>
 
