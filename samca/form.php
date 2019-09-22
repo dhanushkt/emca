@@ -18,11 +18,11 @@
 		<div class="kt-grid kt-grid--ver kt-grid--root">
 			<div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v4 kt-login--signin" id="kt_login">
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" style="background-image: url(assets/media/bg/bg-2.jpg);">
-					<div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper" style="padding-bottom: 5px;">
+					<div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper" style="padding-bottom: 5px; padding-top: 50px;">
 						<div class="kt-login__container">
 							<div class="kt-login__logo">
 								<a href="#">
-									<img width="400" height="160" src="assets/media/logos/samca.png">
+									<img width="450" height="250" src="assets/media/logos/samca1.png">
 								</a>
 							</div>
 <!--

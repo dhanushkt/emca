@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head -->
 
     <!-- SITE TITLE -->
-    <title>SAMCA</title>
+    <title>SAMCA 2019</title>
     <meta name="description" content="Responsive EventHunt HTML Template"/>
     <meta name="keywords" content="Bootstrap3, Event,  Conference, Meetup, Template, Responsive, HTML5"/>
     <meta name="author" content="themearth.com"/>
@@ -105,7 +105,6 @@
 								
 								<img width="450" height="250" src="assets/media/logos/samca1.png">
 <!--                                <h5 class="subtitle">Department of MCA</h5>-->
-<!--								<h3 class="subtitle">S.A.M.C.A</h3>-->
                                 <h2 class="title">We are Coming Soon</h2>
                                 <h3 class="location"><i class="fa fa-map-marker"></i> NMAMIT, Nitte, Karkala.</h3>
                                 <div class="action-area">
