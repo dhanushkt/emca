@@ -86,7 +86,19 @@
 
 	<!-- begin::Body -->
 	<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
-
+			<?php
+			if(isset($_POST['sub']))
+			{
+			$sname=$_POST['fname'];
+			$lname=$_POST['lname'];
+			$email=$_POST['eid'];
+			$phno=$_POST['phone'];
+			$regno=$_POST['usn'];
+			$tal=$_POST['tal'];
+			$otal=$_POST['otalent'];
+			$insert="INSERT INTO table_name VALUES('$snamne','$lname','$email','$phno','$regno','$tal','$otal')";
+			}
+			?>
 		<!-- begin:: Page -->
 		<div class="kt-grid kt-grid--ver kt-grid--root">
 			<div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v4 kt-login--signin" id="kt_login">
@@ -162,7 +174,7 @@
 												<label class="">Email:</label>
 												<div class="input-group">
 												<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-envelope"></i></a></div>
-												<input type="email" class="form-control" placeholder="Enter Email address">
+												<input type="email" name="eid" class="form-control" placeholder="Enter Email address">
 												</div>
 <!--						<span class="form-text text-muted">Please enter your contact number</span>-->
 											</div>
@@ -245,7 +257,7 @@
 												</div>
 												<div class="form-group form-group-last" style="padding-top: 10px;">
 													<label for="exampleTextarea">Additional info / other talents: </label>
-													<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+													<textarea class="form-control" name="otalent" id="exampleTextarea" rows="3"></textarea>
 												</div>
 											</div>
 										</div>
@@ -254,7 +266,7 @@
 										<div class="kt-form__actions">
 											<div class="row">
 												<div class="col-lg-12 kt-align-center">
-													<button type="submit" class="btn btn-primary">Submit</button>
+													<button type="submit" name="sub" class="btn btn-primary">Submit</button>
 <!--												<button type="reset" class="btn btn-secondary">Cancel</button>-->
 												</div>
 											</div>
