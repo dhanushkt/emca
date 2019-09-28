@@ -1,3 +1,21 @@
+<?php
+include '../../access/connect.php';
+if ( isset( $_POST['sub'])) {
+	$sname = $_POST['fname'];
+	$lname = $_POST['lname'];
+	$email = $_POST['eid'];
+	$phno = $_POST['phone'];
+	$regno = $_POST['usn'];
+	
+	if(true)
+	{
+		$studid=mysqli_insert_id($connection);
+		$tal = $_POST['tal'];
+		$otal = $_POST['otalent'];
+	}
+	$insert = "INSERT INTO table_name VALUES('$snamne','$lname','$email','$phno','$regno','$tal','$otal')";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,26 +97,89 @@
 			  -ms-transform: rotate(45deg);
 			  transform: rotate(45deg);
 			}
+			/* The container */
+			.container1 {
+			  display: inline-block;
+			  position: relative;
+			  padding-left: 35px;
+/*			  margin-bottom: 12px;*/
+			  cursor: pointer;
+			  font-size: 22px;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+				margin: 0px 10px 12px 0px;
+				text-align: left !important;
+			}
+			/* Hide the browser's default radio button */
+			.container1 input {
+			  position: absolute;
+			  opacity: 0;
+			  cursor: pointer;
+			}
+
+			/* Create a custom radio button */
+			.checkmark1 {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  height: 25px;
+			  width: 25px;
+			  background-color: #eee;
+			  border-radius: 50%;
+				border: 2px solid #5867dd;
+			}
+
+			/* On mouse-over, add a grey background color */
+			.container1:hover input ~ .checkmark1 {
+			  background-color: lightgray;
+			}
+
+			/* When the radio button is checked, add a blue background */
+			.container1 input:checked ~ .checkmark1 {
+			  background-color: #5867dd;
+			}
+
+			/* Create the indicator (the dot/circle - hidden when not checked) */
+			.checkmark1:after {
+			  content: "";
+			  position: absolute;
+			  display: none;
+				align-content: center;
+			}
+
+			/* Show the indicator (dot/circle) when checked */
+			.container1 input:checked ~ .checkmark1:after {
+			  display: block;
+			}
+
+			/* Style the indicator (dot/circle) */
+			.container1 .checkmark1:after {
+				top: 9px;
+				left: 9px;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: #5867dd;
+			}
 	</style>
+		<script type="text/javascript">
+				function showele(x) {
+		  var ele = document.getElementById(x);
+			ele.style.display = "block";
+		}
+			function hideele(x) {
+		  var ele = document.getElementById(x);
+			ele.style.display = "none";
+		}
+		</script>
 	</head>
 
 	<!-- end::Head -->
 
 	<!-- begin::Body -->
 	<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
-			<?php
-			if(isset($_POST['sub']))
-			{
-			$sname=$_POST['fname'];
-			$lname=$_POST['lname'];
-			$email=$_POST['eid'];
-			$phno=$_POST['phone'];
-			$regno=$_POST['usn'];
-			$tal=$_POST['tal'];
-			$otal=$_POST['otalent'];
-			$insert="INSERT INTO table_name VALUES('$snamne','$lname','$email','$phno','$regno','$tal','$otal')";
-			}
-			?>
 		<!-- begin:: Page -->
 		<div class="kt-grid kt-grid--ver kt-grid--root">
 			<div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v4 kt-login--signin" id="kt_login">
@@ -204,7 +285,7 @@
 													<div class="alert alert-secondary" role="alert">
 														<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
 														<div class="alert-text">
-															Select atleast any one of the talent or hobbies in which you are good at. <br> provide more details (eg: dance form) in additional info box. 
+															Select atleast any one of the talent or hobbies in which you are good at. <br> provide more details about that hobbie (eg: dance form) in additional info box. 
 														</div>
 													</div>
 												</div>
@@ -255,9 +336,70 @@
 															</label>
 <!--<span class="form-text text-muted">Please select at lease 1</span>-->
 												</div>
+												<div class="col-lg-12 col-md-12 col-sm-12">
 												<div class="form-group form-group-last" style="padding-top: 10px;">
 													<label for="exampleTextarea">Additional info / other talents: </label>
 													<textarea class="form-control" name="otalent" id="exampleTextarea" rows="3"></textarea>
+												</div>
+												</div>
+												<hr>
+												<div class="col-lg-12 col-md-12 col-sm-12">
+												<div class="form-group form-group-last" style="padding-top: 10px;">
+													<label>During Under Graduate did your college conduct any fest (inter college or inter class) ? </label>
+													<br>
+													<label class="container1"> YES
+													<input onClick="showele('exp')" type="radio" name="radio">
+  													<span class="checkmark1"></span>
+													</label>
+													<label class="container1"> NO
+													<input onClick="hideele('exp')" type="radio" name="radio">
+  													<span class="checkmark1"></span>
+													</label>
+													
+												</div>
+												</div>
+												<div style="display: none;" id="exp" class="form-group form-group-last" style="padding-top: 10px;">
+												<div  class="col-lg-12 form-group-sub">
+													<label class="form-control-label">Select the event/position in which you worked in: </label>
+													<select class="form-control" name="billing_card_exp_month">
+														<option value="">Select</option>
+														<option value="01">01</option>
+														<option value="02">02</option>
+														<option value="03">03</option>
+														<option value="04">04</option>
+														<option value="05">05</option>
+														<option value="06">06</option>
+														<option value="07">07</option>
+														<option value="08">08</option>
+														<option value="09">09</option>
+														<option value="10">10</option>
+														<option value="11">11</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+													
+												</div>
+												<hr>
+												<div class="col-lg-12 col-md-12 col-sm-12">
+												<div class="form-group form-group-last" style="padding-top: 10px;">
+													<label>Did you participate in any of the inter college fests ? </label>
+													<br>
+													<label class="container1"> YES
+													<input onClick="showele('fest')" type="radio" name="radio">
+  													<span class="checkmark1"></span>
+													</label>
+													<label class="container1"> NO
+													<input onClick="hideele('fest')" type="radio" name="radio">
+  													<span class="checkmark1"></span>
+													</label>
+													
+												</div>
+												</div>
+												<div style="display: none;" id="fest" class="col-lg-12 col-md-12 col-sm-12">
+												<div class="form-group form-group-last" style="padding-top: 10px;">
+													<label for="exampleTextarea"> Enter the events in which you have participated in inter college fests (saparate multiple events with comma eg: web designing, coding) </label>
+													<input type="text" class="form-control" name="fevents" placeholder="Enter events">
+												</div>
 												</div>
 											</div>
 										</div>
