@@ -1,19 +1,27 @@
 <?php
 include '../../access/connect.php';
-if ( isset( $_POST['sub'])) {
-	$sname = $_POST['fname'];
+if(isset($_POST['sub'])) {
+	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
 	$email = $_POST['eid'];
 	$phno = $_POST['phone'];
 	$regno = $_POST['usn'];
-	
+	$batch=2019; 
 	if(true)
 	{
 		$studid=mysqli_insert_id($connection);
 		$tal = $_POST['tal'];
 		$otal = $_POST['otalent'];
 	}
-	$insert = "INSERT INTO table_name VALUES('$snamne','$lname','$email','$phno','$regno','$tal','$otal')";
+	$insert = "INSERT INTO student VALUES('$studid','$regno','$fname','$lname','$email','$phno','$batch')";
+	if($connection->query($insert))
+	{
+	  echo "successfull";
+	} 
+	else
+	{
+		echo "error";
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -216,7 +224,7 @@ if ( isset( $_POST['sub'])) {
 								</div>
 
 								<!--begin::Form-->
-								<form  class="kt-form kt-form--label-right" id="kt_form_1" >
+								<form  class="kt-form kt-form--label-right" id="kt_form_1" action="" method="POST">
 									<div class="kt-portlet__body">
 										<div class="form-group form-group-last kt-hide">
 													<div class="alert alert-danger" role="alert" id="kt_form_1_msg">
