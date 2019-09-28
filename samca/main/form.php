@@ -7,20 +7,29 @@ if(isset($_POST['sub'])) {
 	$phno = $_POST['phone'];
 	$regno = $_POST['usn'];
 	$batch=2019; 
-	if(true)
+
+	$insert = mysqli_query($connection, "INSERT INTO student (usn,fname,lname,email,phno,batch) VALUES ('$regno','$fname','$lname','$email','$phno','$batch')");
+	if($insert)
 	{
-		$studid=mysqli_insert_id($connection);
-		$tal = $_POST['tal'];
-		$otal = $_POST['otalent'];
-	}
-	$insert = "INSERT INTO student VALUES('$studid','$regno','$fname','$lname','$email','$phno','$batch')";
-	if($connection->query($insert))
-	{
-	  echo "successfull";
+		$otal=$expr=$fevents=NULL;
+	  	$studid=mysqli_insert_id($connection);
+		$tali = implode(", ",$_POST['talent']);
+		if(isset($_POST['otalent']))
+			$otal = $_POST['otalent'];
+		if(isset($_POST['expr']))
+			$expr = $_POST['expr'];
+		if(isset($_POST['fevents']))
+			$fevents=$_POST['fevents'];
+		
+		$skillinsert=mysqli_query($connection, "INSERT INTO skills (studid,talents,addtalents,sexpr,sevents) VALUES ('$studid','$tali','$otal','$expr','$fevents')");
+		if($skillinsert)
+		{
+			$smsg="Successfully Submited";
+		}
 	} 
 	else
 	{
-		echo "error";
+		$fmsg="Student Regno / email is already registered";
 	}
 }
 ?>
@@ -224,13 +233,14 @@ if(isset($_POST['sub'])) {
 								</div>
 
 								<!--begin::Form-->
-								<form  class="kt-form kt-form--label-right" id="kt_form_1" action="" method="POST">
+								<form  class="kt-form kt-form--label-right" method="POST">
 									<div class="kt-portlet__body">
-										<div class="form-group form-group-last kt-hide">
-													<div class="alert alert-danger" role="alert" id="kt_form_1_msg">
-														<div class="alert-icon"><i class="flaticon-warning"></i></div>
+										<?php if(isset($smsg)) { ?>
+										<div class="form-group form-group-last">
+													<div class="alert alert-success" role="alert" id="kt_form_1_msg">
+										    <div class="alert-icon"><i class="flaticon2-check-mark"></i></div>
 														<div class="alert-text">
-															Oh snap! Change a few things up and try submitting again.
+															<?php echo $smsg ?>
 														</div>
 														<div class="alert-close">
 															<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -239,6 +249,22 @@ if(isset($_POST['sub'])) {
 														</div>
 													</div>
 												</div>
+										<?php }  ?>
+										<?php if(isset($fmsg)) { ?>
+										<div class="form-group form-group-last">
+													<div class="alert alert-danger" role="alert" id="kt_form_1_msg">
+														<div class="alert-icon"><i class="flaticon-warning"></i></div>
+														<div class="alert-text">
+															<?php echo $fmsg ?>
+														</div>
+														<div class="alert-close">
+															<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+																<span aria-hidden="true"><i class="la la-close"></i></span>
+															</button>
+														</div>
+													</div>
+												</div>
+										<?php }  ?>
 										<div class="form-group row">
 											<div class="col-lg-6">
 												<label>First Name:</label>
@@ -299,47 +325,47 @@ if(isset($_POST['sub'])) {
 												</div>
 												<div class="col-lg-12 col-md-12 col-sm-12">
 															<label class="container"> Dance
-																<input type="checkbox" name="talent"> 
+																<input value="0" type="checkbox" name="talent[]"> 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Music
+																<input value="1" type="checkbox" name="talent[]"> Music
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Singing 
+																<input value="2" type="checkbox" name="talent[]"> Singing 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Sports
+																<input value="0" type="checkbox" name="talent[]"> Sports
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Art 
+																<input value="0" type="checkbox" name="talent[]"> Art 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Photography 
+																<input value="0" type="checkbox" name="talent[]"> Photography 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Video or Audio Editing 
+																<input value="0" type="checkbox" name="talent[]"> Video or Audio Editing 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent"> Graphic or Logo Designing
+																<input value="0" type="checkbox" name="talent[]"> Graphic or Logo Designing
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent">  
+																<input value="0" type="checkbox" name="talent[]">  
 																<span class="checkmark"></span> Coding / Web Development
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent">  
+																<input value="0" type="checkbox" name="talent[]">  
 																<span class="checkmark"></span> Calligraphy
 															</label>
 															<label class="container">
-																<input type="checkbox" name="talent">  
+																<input value="0" type="checkbox" name="talent[]">  
 																<span class="checkmark"></span> Anchoring / MC
 															</label>
 <!--<span class="form-text text-muted">Please select at lease 1</span>-->
@@ -369,7 +395,7 @@ if(isset($_POST['sub'])) {
 												<div style="display: none;" id="exp" class="form-group form-group-last" style="padding-top: 10px;">
 												<div  class="col-lg-12 form-group-sub">
 													<label class="form-control-label">Select the event/position in which you worked in: </label>
-													<select class="form-control" name="billing_card_exp_month">
+													<select name="expr" class="form-control" name="billing_card_exp_month">
 														<option value="">Select</option>
 														<option value="01">01</option>
 														<option value="02">02</option>
@@ -393,11 +419,11 @@ if(isset($_POST['sub'])) {
 													<label>Did you participate in any of the inter college fests ? </label>
 													<br>
 													<label class="container1"> YES
-													<input onClick="showele('fest')" type="radio" name="radio">
+													<input onClick="showele('fest')" type="radio" name="fest">
   													<span class="checkmark1"></span>
 													</label>
 													<label class="container1"> NO
-													<input onClick="hideele('fest')" type="radio" name="radio">
+													<input onClick="hideele('fest')" type="radio" name="fest">
   													<span class="checkmark1"></span>
 													</label>
 													
@@ -417,6 +443,7 @@ if(isset($_POST['sub'])) {
 											<div class="row">
 												<div class="col-lg-12 kt-align-center">
 													<button type="submit" name="sub" class="btn btn-primary">Submit</button>
+													<input type="submit" value="submit">
 <!--												<button type="reset" class="btn btn-secondary">Cancel</button>-->
 												</div>
 											</div>
