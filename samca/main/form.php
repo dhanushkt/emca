@@ -11,7 +11,7 @@ if(isset($_POST['sub'])) {
 	$insert = mysqli_query($connection, "INSERT INTO student (usn,fname,lname,email,phno,batch) VALUES ('$regno','$fname','$lname','$email','$phno','$batch')");
 	if($insert)
 	{
-		$otal=$expr=$fevents=NULL;
+		$otal=$expr=$fevents=0;
 	  	$studid=mysqli_insert_id($connection);
 		$tali = implode(", ",$_POST['talent']);
 		if(isset($_POST['otalent']))
@@ -244,7 +244,7 @@ if(isset($_POST['sub'])) {
 														</div>
 														<div class="alert-close">
 															<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-																<span aria-hidden="true"><i class="la la-close"></i></span>
+																
 															</button>
 														</div>
 													</div>
@@ -259,7 +259,7 @@ if(isset($_POST['sub'])) {
 														</div>
 														<div class="alert-close">
 															<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-																<span aria-hidden="true"><i class="la la-close"></i></span>
+																
 															</button>
 														</div>
 													</div>
@@ -382,11 +382,11 @@ if(isset($_POST['sub'])) {
 													<label>During Under Graduate did your college conduct any fest (inter college or inter class) ? </label>
 													<br>
 													<label class="container1"> YES
-													<input onClick="showele('exp')" type="radio" name="radio">
+													<input required onClick="showele('exp')" type="radio" name="radio">
   													<span class="checkmark1"></span>
 													</label>
 													<label class="container1"> NO
-													<input onClick="hideele('exp')" type="radio" name="radio">
+													<input required onClick="hideele('exp')" type="radio" name="radio">
   													<span class="checkmark1"></span>
 													</label>
 													
@@ -419,11 +419,11 @@ if(isset($_POST['sub'])) {
 													<label>Did you participate in any of the inter college fests ? </label>
 													<br>
 													<label class="container1"> YES
-													<input onClick="showele('fest')" type="radio" name="fest">
+													<input required onClick="showele('fest')" type="radio" name="fest">
   													<span class="checkmark1"></span>
 													</label>
 													<label class="container1"> NO
-													<input onClick="hideele('fest')" type="radio" name="fest">
+													<input required onClick="hideele('fest')" type="radio" name="fest">
   													<span class="checkmark1"></span>
 													</label>
 													
@@ -431,7 +431,7 @@ if(isset($_POST['sub'])) {
 												</div>
 												<div style="display: none;" id="fest" class="col-lg-12 col-md-12 col-sm-12">
 												<div class="form-group form-group-last" style="padding-top: 10px;">
-													<label for="exampleTextarea"> Enter the events in which you have participated in inter college fests (saparate multiple events with comma eg: web designing, coding) </label>
+													<label for="exampleTextarea"> Enter the events in which you have participated in inter college fests (separate multiple events with comma eg: web designing, coding) </label>
 													<input type="text" class="form-control" name="fevents" placeholder="Enter events">
 												</div>
 												</div>
@@ -443,7 +443,7 @@ if(isset($_POST['sub'])) {
 											<div class="row">
 												<div class="col-lg-12 kt-align-center">
 													<button type="submit" name="sub" class="btn btn-primary">Submit</button>
-													<input type="submit" value="submit">
+										
 <!--												<button type="reset" class="btn btn-secondary">Cancel</button>-->
 												</div>
 											</div>
