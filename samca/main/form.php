@@ -5,10 +5,11 @@ if(isset($_POST['sub'])) {
 	$lname = $_POST['lname'];
 	$email = $_POST['eid'];
 	$phno = $_POST['phone'];
-	$regno = $_POST['usn'];
+	$regno = strtolower($_POST['usn']);
+	$type=$_POST['type'];
 	$batch=2019; 
 
-	$insert = mysqli_query($connection, "INSERT INTO student (usn,fname,lname,email,phno,batch) VALUES ('$regno','$fname','$lname','$email','$phno','$batch')");
+	$insert = mysqli_query($connection, "INSERT INTO student (usn,fname,lname,email,phno,batch,type) VALUES ('$regno','$fname','$lname','$email','$phno','$batch','$type')");
 	if($insert)
 	{
 		$otal=$expr=$fevents=0;
@@ -18,7 +19,7 @@ if(isset($_POST['sub'])) {
 			$otal = $_POST['otalent'];
 		if(isset($_POST['expr']))
 			$expr = $_POST['expr'];
-		if(isset($_POST['fevents']))
+		if(!empty($_POST['fevents']))
 			$fevents=$_POST['fevents'];
 		
 		$skillinsert=mysqli_query($connection, "INSERT INTO skills (studid,talents,addtalents,sexpr,sevents) VALUES ('$studid','$tali','$otal','$expr','$fevents')");
@@ -227,7 +228,7 @@ if(isset($_POST['sub'])) {
 								<div class="kt-portlet__head">
 									<div class="kt-portlet__head-label">
 										<h3 class="kt-portlet__head-title">
-										Student Talent Acquisition [ 1st Year MCA ]
+										Student Talent Acquisition [ MCA ]
 										</h3>
 									</div>
 								</div>
@@ -267,7 +268,7 @@ if(isset($_POST['sub'])) {
 										<?php }  ?>
 										<div class="form-group row">
 											<div class="col-lg-6">
-												<label>First Name:</label>
+												<label>First Name :</label>
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-user"></i></a></div>
 													
@@ -275,7 +276,7 @@ if(isset($_POST['sub'])) {
 												</div>
 											</div>
 											<div class="col-lg-6">
-												<label>Last Name:</label>
+												<label>Last Name :</label>
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-user"></i></a></div>
 													
@@ -286,7 +287,7 @@ if(isset($_POST['sub'])) {
 										</div>
 										<div class="form-group row">
 											<div class="col-lg-6">
-												<label class="">Email:</label>
+												<label class="">Email :</label>
 												<div class="input-group">
 												<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-envelope"></i></a></div>
 												<input type="email" name="eid" class="form-control" placeholder="Enter Email address">
@@ -294,7 +295,7 @@ if(isset($_POST['sub'])) {
 <!--						<span class="form-text text-muted">Please enter your contact number</span>-->
 											</div>
 											<div class="col-lg-6">
-												<label class="">Phone Number:</label>
+												<label class="">Phone Number :</label>
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-phone"></i></a></div>
 													<input required type="text" class="form-control" name="phone" placeholder="Enter phone">
@@ -303,18 +304,30 @@ if(isset($_POST['sub'])) {
 											</div>
 										</div>
 										<div class="form-group row">
-											<div class="col-lg-12">
-												<label class="">Roll Number or USN: </label>
+											<div class="col-lg-6">
+												<label class="">Roll Number or USN :</label>
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-mortar-board"></i></a></div>
 													<input required type="text" class="form-control" name="usn" placeholder="Enter roll number or usn">
 												</div>
 											</div>
+											<div class="col-lg-6">
+												<label style="padding-bottom: 10px">Select batch :</label>
+													<br>
+													<label class="container1"> Regular (3 years)
+													<input required type="radio" name="type" value="regular">
+  													<span class="checkmark1"></span>
+													</label>
+													<label class="container1"> Lateral (2 years)
+													<input required type="radio" name="type" value="lateral">
+  													<span class="checkmark1"></span>
+													</label>
+											</div>
 										</div>
 										<hr>
 										<div class="form-group row">
 											<div class="col-lg-12">
-												<label>Talents: </label>
+												<label>Talents :</label>
 												<div class="form-group form-group-last">
 													<div class="alert alert-secondary" role="alert">
 														<div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
@@ -325,54 +338,54 @@ if(isset($_POST['sub'])) {
 												</div>
 												<div class="col-lg-12 col-md-12 col-sm-12">
 															<label class="container"> Dance
-																<input value="0" type="checkbox" name="talent[]"> 
+																<input value="Dance" type="checkbox" name="talent[]"> 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="1" type="checkbox" name="talent[]"> Music
+																<input value="Music" type="checkbox" name="talent[]"> Music
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="2" type="checkbox" name="talent[]"> Singing 
+																<input value="Singing" type="checkbox" name="talent[]"> Singing 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]"> Sports
+																<input value="Sports" type="checkbox" name="talent[]"> Sports
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]"> Art 
+																<input value="Art" type="checkbox" name="talent[]"> Art 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]"> Photography 
+																<input value="Photography" type="checkbox" name="talent[]"> Photography 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]"> Video or Audio Editing 
+																<input value="Video or Audio Editing" type="checkbox" name="talent[]"> Video or Audio Editing 
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]"> Graphic or Logo Designing
+																<input value="Graphic or Logo Designing" type="checkbox" name="talent[]"> Graphic or Logo Designing
 																<span class="checkmark"></span>
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]">  
+																<input value="Coding / Web Development" type="checkbox" name="talent[]">  
 																<span class="checkmark"></span> Coding / Web Development
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]">  
+																<input value="Calligraphy" type="checkbox" name="talent[]">  
 																<span class="checkmark"></span> Calligraphy
 															</label>
 															<label class="container">
-																<input value="0" type="checkbox" name="talent[]">  
+																<input value="Anchoring / MC" type="checkbox" name="talent[]">  
 																<span class="checkmark"></span> Anchoring / MC
 															</label>
 <!--<span class="form-text text-muted">Please select at lease 1</span>-->
 												</div>
 												<div class="col-lg-12 col-md-12 col-sm-12">
 												<div class="form-group form-group-last" style="padding-top: 10px;">
-													<label for="exampleTextarea">Additional info / other talents: </label>
+													<label for="exampleTextarea">Additional info / other talents : </label>
 													<textarea class="form-control" name="otalent" id="exampleTextarea" rows="3"></textarea>
 												</div>
 												</div>
@@ -392,23 +405,27 @@ if(isset($_POST['sub'])) {
 													
 												</div>
 												</div>
+                                                <br>
 												<div style="display: none;" id="exp" class="form-group form-group-last" style="padding-top: 10px;">
 												<div  class="col-lg-12 form-group-sub">
-													<label class="form-control-label">Select the event/position in which you worked in: </label>
+													<label class="form-control-label">Select the event / position in which you worked in :</label>
 													<select name="expr" class="form-control" name="billing_card_exp_month">
-														<option value="">Select</option>
-														<option value="01">01</option>
-														<option value="02">02</option>
-														<option value="03">03</option>
-														<option value="04">04</option>
-														<option value="05">05</option>
-														<option value="06">06</option>
-														<option value="07">07</option>
-														<option value="08">08</option>
-														<option value="09">09</option>
+														<option hidden selected disabled>Select Event</option>
+														<option value="fest coordinator">Fest coordinator / Secretary / CEO</option>
+														<option value="coding">Coding</option>
+														<option value="web designing">web designing</option>
+														<option value="IT quiz">IT quiz</option>
+														<option value="Photography">Photography / videography</option>
+														<option value="Treasure Hunt">Treasure Hunt</option>
+														<option value="Gaming">Gaming</option>
+														<option value="Tech Talks / Debate">Tech Talks / Debate</option>
+														<option value="Mega Event / Surprise Event">Mega Event / Surprise Event</option>
+														<option value="IT manager">IT manager</option>
+														<option value="other">Other</option>
+														<!--<option value="09">09</option>
 														<option value="10">10</option>
 														<option value="11">11</option>
-														<option value="12">12</option>
+														<option value="12">12</option>-->
 													</select>
 												</div>
 													
@@ -429,6 +446,7 @@ if(isset($_POST['sub'])) {
 													
 												</div>
 												</div>
+                                                <br>
 												<div style="display: none;" id="fest" class="col-lg-12 col-md-12 col-sm-12">
 												<div class="form-group form-group-last" style="padding-top: 10px;">
 													<label for="exampleTextarea"> Enter the events in which you have participated in inter college fests (separate multiple events with comma eg: web designing, coding) </label>

@@ -52,6 +52,7 @@ if ( isset( $_POST[ 'eventsubmit' ] ) ) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<base href=""
 	<link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
 	<title>SAMCA</title>
 	<!-- Bootstrap Core CSS -->
@@ -186,7 +187,6 @@ if ( isset( $_POST[ 'eventsubmit' ] ) ) {
 				<div class="col-sm-12">
 					<div class="white-box">
 					<center><h2>ADMISSION FOR MCA PROGRAMME</h2></center>
-					<center><h4>(THROUGHOUT VTU/K-MAT ENTRANCE TEST)</h4></center>
 						<form data-toggle="validator" method="post">
 							<h3 class="box-title m-b-0">A.PERSONAL DATA</h3>
 							<hr>
