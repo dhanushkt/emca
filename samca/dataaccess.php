@@ -44,10 +44,18 @@ if(isset($_POST['del']))
   <table class="table table-dark table-hover">
     <thead>
       <tr class="text-center">
+        <th>USN</th>
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
-		 <th>Action</th>
+        <th>Phone no</th>
+        <th>batch</th>
+        <th>type</th>
+        <th>talents</th>
+        <th>addtalents</th>
+        <th>sexprience</th>
+        <th>sevents</th>
+		    <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -57,23 +65,21 @@ if(isset($_POST['del']))
 		while($data=mysqli_fetch_assoc($getdata)) {
 		?>
       <tr class="text-center"> 
+        <td><?php echo $data['usn']; ?></td>
         <td><?php echo $data['fname']; ?></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><?php echo $data['lname']; ?></td>
+        <td><?php echo $data['email']; ?></td>
+        <td><?php echo $data['phno']; ?></td>
+        <td><?php echo $data['batch']; ?></td>
+        <td><?php echo $data['type']; ?></td>
+        <td><?php echo $data['talents']; ?></td>
+        <td><?php echo $data['addtalents']; ?></td>
+        <td><?php echo $data['sexpr']; ?></td>
+        <td><?php echo $data['sevents']; ?></td>
 		<td style="text-align: center;" ><input name="id" type="hidden" value="<?php echo $data['studid']; ?>"> <button type="submit" name="del" class="btn btn-danger">DELETE</button></td>
       </tr>
 		<?php } ?>
 	</form>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
     </tbody>
   </table>
 </div>
