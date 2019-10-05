@@ -1,7 +1,7 @@
 <?php
 include_once '../access/connect.php';
 session_start();
-if(!(isset($_SESSION['sausername'])||isset($_SESSION['ausername'])))
+if(!(isset($_SESSION['ausername'])))
 {
 	echo'<script> window.location="403.php";</script>';
 }

@@ -38,35 +38,18 @@
 			</li>
 
 			<!---PNB Added Doctors menu --->
-             <li> <a href="javascript:void(0);" class="waves-effect text-white"><i class="fa fa-edit p-r-10"></i> <span class="hide-menu">Fest Details<span class="fa arrow"></span></span></a>
+             <li> <a href="javascript:void(0);" class="waves-effect text-white"><i class="fa fa-edit p-r-10"></i> <span class="hide-menu">Students<span class="fa arrow"></span></span></a>
 				<ul class="nav nav-second-level">
-                     <li> <a href="edit-fest-details.php">Edit Fest Details</a> </li>
-					<li> <a href="fest-settings.php"> Fest Settings</a> </li>	
+                     <li> <a href="edit-fest-details.php">View Students</a> </li>
+					<li> <a href="fest-settings.php"> Register</a> </li>	
 				</ul>
 			</li>
-			<li> <a href="javascript:void(0);" class="waves-effect text-white"><i class="fa fa-users p-r-10"></i> <span class="hide-menu"> Event <span class="fa arrow"></span></span></a>
+			<li> <a href="javascript:void(0);" class="waves-effect text-white"><i class="fa fa-users p-r-10"></i> <span class="hide-menu"> Staff <span class="fa arrow"></span></span></a>
 				<ul class="nav nav-second-level">
-					<li> <a href="add-events.php">Add Event</a> </li>
-					<li> <a href="view-eventheads.php">View Event</a> </li>
+					<li> <a href="add-staff.php">Add Staff</a> </li>
+					<li> <a href="view-staffs.php">View Staffs</a> </li>
                     
 				</ul>
-			</li>
-			<!---PNB Added Patient menu --->
-			<li> <a href="view-colleges.php" class="waves-effect text-white"><i class="fa fa-university p-r-10"></i> <span class="hide-menu"> College Registered<span class="fa arrow"></span></span></a>
-
-			</li>
-           
-           
-			<li> <a href="view-schedule.php" class="waves-effect text-white"><i class="fa fa-calendar-alt p-r-10"></i> <span class="hide-menu"> Event Schedule<span class="fa arrow"></span></span></a>
-				
-			</li>
-            
-			<li> <a href="view-results.php" class="waves-effect text-white"><i class="fa fa-clipboard-list p-r-10"></i> <span class="hide-menu">Results<span class="fa arrow"></span></span></a>
-				
-			</li>
-            
-            <li> <a href="view-feedback.php" class="waves-effect text-white"><i class="fa fa-comment-alt p-r-10"></i> <span class="hide-menu">Feedback<span class="fa arrow"></span></span></a>
-				
 			</li>
             
            

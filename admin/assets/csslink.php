@@ -1,3 +1,5 @@
+	<meta name="description" content="eMCA">
+    <meta name="author" content="D4">
 <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <title>OFMS</title>

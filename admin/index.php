@@ -1,36 +1,36 @@
 <?php
 include '../login/accesscontroladmin.php';
 $ausername=$_SESSION['admin'];
-require('connect.php');
+require('../access/connect.php');
 
-$getidquery="SELECT fests.fid FROM admin JOIN fests ON admin.aid=fests.aid WHERE ausername='$ausername'";
-$getidresult = mysqli_query($connection, $getidquery);
-$getidrow = mysqli_fetch_assoc($getidresult);
-$fid=$getidrow['fid'];
-
-
-$getcollegecount=mysqli_query($connection,"SELECT * FROM participants WHERE teamcode IS NOT NULL && fid='$fid'");
-$pcount=mysqli_num_rows($getcollegecount);
-
-$getdoccount=mysqli_query($connection,"SELECT * FROM events WHERE fid='$fid'");
-$dcount=mysqli_num_rows($getdoccount);
-
-$getstaffcount=mysqli_query($connection,"SELECT * FROM feedback WHERE fid='$fid'");
-$scount=mysqli_num_rows($getstaffcount);
-
-$getwardcount=mysqli_query($connection,"SELECT * FROM participants WHERE teamcode is NULL && fid='$fid' ");
-$wcount=mysqli_num_rows($getwardcount);
-
-$getsettingsquery="SELECT * FROM admin_settings WHERE fid='$fid'";
-$getsettings=mysqli_query( $connection, $getsettingsquery );
-$getsetrow = mysqli_fetch_assoc( $getsettings );
-
-$getfestdetails = mysqli_query( $connection,"SELECT * FROM fests WHERE fid='$fid'");
-$getfestrow = mysqli_fetch_assoc( $getfestdetails );
-$dateb=$getfestrow['fdate'];
-$myDateTime = DateTime::createFromFormat('Y-m-d', $dateb);
-$dobc = $myDateTime->format('F j, Y'); 
-$datefest = $myDateTime->format('d-m-Y');
+//$getidquery="SELECT fests.fid FROM admin JOIN fests ON admin.aid=fests.aid WHERE ausername='$ausername'";
+//$getidresult = mysqli_query($connection, $getidquery);
+//$getidrow = mysqli_fetch_assoc($getidresult);
+//$fid=$getidrow['fid'];
+//
+//
+//$getcollegecount=mysqli_query($connection,"SELECT * FROM participants WHERE teamcode IS NOT NULL && fid='$fid'");
+//$pcount=mysqli_num_rows($getcollegecount);
+//
+//$getdoccount=mysqli_query($connection,"SELECT * FROM events WHERE fid='$fid'");
+//$dcount=mysqli_num_rows($getdoccount);
+//
+//$getstaffcount=mysqli_query($connection,"SELECT * FROM feedback WHERE fid='$fid'");
+//$scount=mysqli_num_rows($getstaffcount);
+//
+//$getwardcount=mysqli_query($connection,"SELECT * FROM participants WHERE teamcode is NULL && fid='$fid' ");
+//$wcount=mysqli_num_rows($getwardcount);
+//
+//$getsettingsquery="SELECT * FROM admin_settings WHERE fid='$fid'";
+//$getsettings=mysqli_query( $connection, $getsettingsquery );
+//$getsetrow = mysqli_fetch_assoc( $getsettings );
+//
+//$getfestdetails = mysqli_query( $connection,"SELECT * FROM fests WHERE fid='$fid'");
+//$getfestrow = mysqli_fetch_assoc( $getfestdetails );
+//$dateb=$getfestrow['fdate'];
+//$myDateTime = DateTime::createFromFormat('Y-m-d', $dateb);
+//$dobc = $myDateTime->format('F j, Y'); 
+//$datefest = $myDateTime->format('d-m-Y');
 
 ?>
 <!DOCTYPE html>
@@ -45,8 +45,6 @@ $datefest = $myDateTime->format('d-m-Y');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Online Fest Management System">
-    <meta name="author" content="Soujanya M">
     <!--csslink.php includes fevicon and title-->
     <?php include 'assets/csslink.php'; ?>
 	<link href="../plugins/css/hover.css" rel="stylesheet" media="all">

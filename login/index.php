@@ -8,14 +8,14 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		$password= md5($_POST['password']);
 		//sqll query
 		//double quotes outside so we can use single quotes inside
-		$query="SELECT * FROM `admin` WHERE (ausername='$username' OR aemail='$username')  AND apassword='$password'";
+		$query="SELECT * FROM `admin` WHERE (auname='$username' OR aemail='$username') AND apass='$password'";
 		$result = mysqli_query($connection,$query);
 		$row = mysqli_fetch_assoc($result);
 		$count = mysqli_num_rows($result);
 		if($count==1)
 		{
 			//session_start();
-			$_SESSION['ausername'] = $row["ausername"];
+			$_SESSION['ausername'] = $row["auname"];
 			//$_SESSION['password'] = $password;
 			// alternative redirect (die() should be there)
 			// echo "<script>location.href='target-page.php';</script>";
@@ -243,7 +243,7 @@ if(isset($_POST['resetemail']))
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                            <button class="btn btn-info btn-block btn-lg text-uppercase " type="submit">Log In</button>
                         </div>
                     </div>
                     <div class="row">
