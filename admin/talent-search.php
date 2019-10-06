@@ -2,8 +2,13 @@
 include '../login/accesscontroladmin.php';
 require('../access/connect.php');
 $ausername=$_SESSION['ausername'];
-
-
+$check=-1;
+if(isset($_POST['search']))
+{
+	$talent=$_POST['tsearch'];
+	$gettalent=mysqli_query($connection, "SELECT * FROM skills JOIN student ON skills.studid=student.studid WHERE talents LIKE '%$talent%'");
+	$check=mysqli_num_rows($gettalent);
+}
     
     
 ?>
@@ -52,7 +57,25 @@ $ausername=$_SESSION['ausername'];
                     </div>
                     <!-- /.breadcrumb -->
                 </div>
-				
+				<div class="row">
+					<div class="col-sm-12">
+                        <div class="white-box" >
+							<div class="row">
+								<div class="col-lg-12">
+									<form method="post">
+									<div class="input-group">
+										<input name="tsearch" type="text" class="form-control" placeholder="Enter the talent you are looking for">
+										<span class="input-group-btn">
+										   <button name="search" class="btn btn-info" type="submit">Search!</button>
+										</span>
+									</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php if($check>0) { ?>
 				<div class="row">
 				<div class="col-sm-12">
                         <div class="white-box" >
@@ -80,25 +103,23 @@ $ausername=$_SESSION['ausername'];
                                         <tr>
                                             <th>USN</th>
                                             <th>Name</th>
-                                            <th>Email</th>
                                             <th>Phone</th>
-                                            <th>Batch</th>
-											<th>Type</th>
+                                            <th>Talent</th>
+											<th>Batch</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 										<?php
-										$getstud=mysqli_query($connection, "SELECT * FROM student");
-										foreach($getstud as $key=>$getstud)
+										//$getstud=mysqli_query($connection, "SELECT * FROM student");
+										foreach($gettalent as $key=>$gettalent)
 										{
 										?>
                                         <tr>
-                                            <td><?php echo $getstud['usn']; ?></td>
-                                            <td><?php echo $getstud['fname']." ".$getstud['lname']; ?></td>
-                                            <td><?php  echo $getstud['email']; ?></td>
-                                            <td><?php echo $getstud['phno']; ?></td>
-                                            <td><?php echo $getstud['batch']; ?></td>
-											<td><?php echo $getstud['type']; ?></td>
+                                            <td><?php echo $gettalent['usn']; ?></td>
+                                            <td><?php echo $gettalent['fname']." ".$gettalent['lname']; ?></td>
+                                            <td><?php echo $gettalent['phno']; ?></td>
+                                            <td><?php echo $gettalent['talents']; ?></td>
+											<td><?php echo $gettalent['batch']." ".$gettalent['type']; ?></td>
                                         </tr>
 										<?php } ?>
                                     </tbody>
@@ -107,7 +128,17 @@ $ausername=$_SESSION['ausername'];
                         </div>
                     </div>
 				</div>
-               
+               <?php } else if($check==0) {  ?>
+				<div class="row">
+				<div class="col-sm-12">
+                    <div class="white-box" >
+						<div class="alert alert-danger text-center text-capitalize">
+							<h4>Talent Not found!</h4>
+						</div>
+					</div>
+				</div>
+				</div>
+				<?php } ?>
             </div>
             <!-- /.container-fluid -->
             <!--footer.php contains footer-->

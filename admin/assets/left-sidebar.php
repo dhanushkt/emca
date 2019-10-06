@@ -35,13 +35,13 @@
 					<li> <a href="add-staff.php">Add Staff</a> </li>
 					<li> <a href="view-staffs.php">View Staff</a> </li>
 				</ul>
-			</li>
-
+			</li> -->
+			<li> <a href="talent-search.php" class="waves-effect text-white"><i class="fa fa-search p-r-10"></i> <span class="hide-menu">Talent Search</span></a> </li>
 			<!---PNB Added Doctors menu --->
              <li> <a href="javascript:void(0);" class="waves-effect text-white"><i class="fa fa-edit p-r-10"></i> <span class="hide-menu">Students<span class="fa arrow"></span></span></a>
 				<ul class="nav nav-second-level">
-                     <li> <a href="edit-fest-details.php">View Students</a> </li>
-					<li> <a href="fest-settings.php"> Register</a> </li>	
+                     <li> <a href="view-students.php">View Students</a> </li>
+					<li> <a href="#"> Register</a> </li>	
 				</ul>
 			</li>
 			<li> <a href="javascript:void(0);" class="waves-effect text-white"><i class="fa fa-users p-r-10"></i> <span class="hide-menu"> Staff <span class="fa arrow"></span></span></a>

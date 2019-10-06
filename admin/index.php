@@ -3,28 +3,8 @@ include '../login/accesscontroladmin.php';
 $ausername=$_SESSION['admin'];
 require('../access/connect.php');
 
-//$getidquery="SELECT fests.fid FROM admin JOIN fests ON admin.aid=fests.aid WHERE ausername='$ausername'";
-//$getidresult = mysqli_query($connection, $getidquery);
-//$getidrow = mysqli_fetch_assoc($getidresult);
-//$fid=$getidrow['fid'];
-//
-//
-//$getcollegecount=mysqli_query($connection,"SELECT * FROM participants WHERE teamcode IS NOT NULL && fid='$fid'");
-//$pcount=mysqli_num_rows($getcollegecount);
-//
-//$getdoccount=mysqli_query($connection,"SELECT * FROM events WHERE fid='$fid'");
-//$dcount=mysqli_num_rows($getdoccount);
-//
-//$getstaffcount=mysqli_query($connection,"SELECT * FROM feedback WHERE fid='$fid'");
-//$scount=mysqli_num_rows($getstaffcount);
-//
-//$getwardcount=mysqli_query($connection,"SELECT * FROM participants WHERE teamcode is NULL && fid='$fid' ");
-//$wcount=mysqli_num_rows($getwardcount);
-//
-//$getsettingsquery="SELECT * FROM admin_settings WHERE fid='$fid'";
-//$getsettings=mysqli_query( $connection, $getsettingsquery );
-//$getsetrow = mysqli_fetch_assoc( $getsettings );
-//
+$getstudno=mysqli_query($connection, "SELECT * FROM student");
+$studno=mysqli_num_rows($getstudno);
 //$getfestdetails = mysqli_query( $connection,"SELECT * FROM fests WHERE fid='$fid'");
 //$getfestrow = mysqli_fetch_assoc( $getfestdetails );
 //$dateb=$getfestrow['fdate'];
@@ -115,11 +95,10 @@ require('../access/connect.php');
 							<img id="theImgId" class="card-img" src="../plugins/images/cards/bg.png" height="140" alt="Card image">
 							<div class="card-img-overlay" style="padding-top: 5px">
 								<h4 class="card-title text-uppercase">WELCOME <?php echo $ausername; ?></h4>
-								<p class="card-text" style=" float: left;">You are logged-in to ADMIN control panel </p><p class="card-text text-warning"><i style="padding-left: 10px" class="fa fa-calendar-alt"></i><?php echo ' '.$datefest; if($getfestrow['fnodays']>=2){ echo ' to '.$getfestrow['ftodate']; } ?></p>
-								<p style="font-size: 16px; float: left; padding-right: 10px" class="card-text text-blue">Days Left </p>
-								<p id="demo" style="font-size: 16px" class="card-text text-blue"></p>
-				<!--<p class="card-text"><small class="text-white">~OFMS</small></p>-->
-                                <?php if($getfestrow['rules']==NULL || $getfestrow['regfees']==NULL) { ?>
+								<p class="card-text" style=" float: left;">You are logged-in to ADMIN control panel. </p>
+								
+								<!--<p class="card-text"><small class="text-white">~OFMS</small></p>-->
+                                <?php if(false) { ?>
                                 <p id="wText" class="card-text text-warning"><i class="fa fa-info-circle"></i><b><?php echo' Fest Rules and Fee is not Updated'; ?> </b></p> <?php } ?>
 							</div>
 						</div>
@@ -128,6 +107,7 @@ require('../access/connect.php');
 	
 				
                 <div class="row">
+<!--
                     <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location='view-colleges.php'">
                         <div class="white-box">
 							<h3 class="box-title"><b>Colleges Registered</b></h3>
@@ -137,85 +117,22 @@ require('../access/connect.php');
 							</ul>
                         </div>
                     </div>
+-->
                     <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
                         <div class="white-box">
-							<h3 class="box-title"><b>No Of Events</b></h3>
+							<h3 class="box-title"><b>Students Registered</b></h3>
 							<ul class="list-inline two-part">
 								<li><i class="fa fa-users text-info"></i></li>
-								<li class="text-right"><span class="counter"><?php echo $dcount ?></span></li>
+								<li class="text-right"><span class="counter"><?php echo $studno ?></span></li>
 							</ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
-                        <div class="white-box">
-							<h3 class="box-title"><b>No Of Feedback </b></h3>
-							<ul class="list-inline two-part">
-								<li><i class="fa fa-comment-dots" style="color: blueviolet"></i></li>
-								<li class="text-right"><span class="counter"><?php echo $scount ?></span></li>
-							</ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location='view-participants.php'">
-                        <div class="white-box">
-							<h3 class="box-title"><b>Confirmed Colleges</b></h3>
-							<ul class="list-inline two-part">
-								<li><i class="fa fa-check-square text-info"></i></li>
-								<li class="text-right"><span class="counter"><?php echo $pcount ?></span></li>
-							</ul>
-                        </div>
-                    </div>
+        
                     
                 </div>
                 <!--/row -->
 				<!--row -->
-                <div class="row p-t-10">
-                     <div class="col-md-3 col-sm-6 Hoveranimated hvr-float" data-toggle="tooltip" data-original-title="Fest is <?php if($getsetrow['viewfest']==0) echo'NOT'; ?> public and <?php if($getsetrow['startreg']==0 || $getsetrow['startreg']=='2') echo'NOT';  ?> open for Registration" onClick="window.location='fest-settings.php'">
-                        <div class="white-box">
-                            <div class="r-icon-stats">
-                                <i class="fa fa-cog bg-black Hoveranimatedoc"></i>
-                                <div class="bodystate p-l-10 p-t-10">
-									<h4><b>Fest Settings</b></h4>
-                                    <!--<span class="text-muted" style="font-size: 80%"></span>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 Hoveranimatep hvr-float" data-toggle="tooltip" data-original-title="Add New Event" onClick="window.location='add-events.php'">
-                        <div class="white-box">
-                            <div class="r-icon-stats">
-                               <i class="fa fa-user bg-black Hoveranimatepat"></i>
-                                <div class="bodystate p-t-10">
-									<h4><b>Event Head</b></h4>
-                                    <!--<span class="text-muted" style="font-size: 80%"></span>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                    <div class="col-md-3 col-sm-6 Hoveranimates hvr-float" data-toggle="tooltip" data-original-title="View Event Result" onClick="window.location='view-results.php'">
-                        <div class="white-box">
-                            <div class="r-icon-stats">
-                                <i class="fa fa-clipboard-list bg-black Hoveranimatestaff"></i>
-                                <div class="bodystate p-t-10">
-									<h4><b>Event Result</b></h4>
-                                    <span class="text-muted" style="font-size: 80%"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                       <div class="col-md-3 col-sm-6 Hoveranimatew hvr-float" data-toggle="tooltip" data-original-title="Edit Fest Details" onClick="window.location='edit-fest-details.php'">
-                        <div class="white-box">
-                            <div class="r-icon-stats">
-                                <i class="fa fa-edit bg-black Hoveranimatewrd"></i>
-                                <div class="bodystate p-t-10">
-									<h4><b>Fest Details</b></h4>
-                                    <span class="text-muted" style="font-size: 80%"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<!-- removed buttons -->
                 <!--/row -->
                 
                 <!--DNS End-->
