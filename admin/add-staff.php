@@ -2,62 +2,22 @@
 include '../login/accesscontroladmin.php';
 require('../access/connect.php');
 $ausername=$_SESSION['ausername'];
-//$getidquery="SELECT fests.fid FROM admin JOIN fests ON admin.aid=fests.aid WHERE ausername='$ausername'";
-//$getidresult = mysqli_query($connection, $getidquery);
-//$getidrow = mysqli_fetch_assoc($getidresult);
-//$aid=$getidrow['aid'];
-//$fid=$getidrow['fid'];
-if (isset($_POST['eventheadsubmit']))
-	{
-		// real eacape sting is used to prevent sql injection hacking
-		$ename=mysqli_real_escape_string($connection,$_POST['ename']);
-		$edesc=mysqli_real_escape_string($connection,$_POST['edesc']);
-		$erounds= mysqli_real_escape_string($connection,$_POST['erounds']);
-        $participants=mysqli_real_escape_string($connection,$_POST['participants']);
-		$hname=mysqli_real_escape_string($connection,$_POST['hname']).',';
-		$addname=mysqli_real_escape_string($connection,$_POST['addname']);
-		$hmob=mysqli_real_escape_string($connection,$_POST['hmob']);
-        $hemail=mysqli_real_escape_string($connection,$_POST['hemail']);
-		$husername=mysqli_real_escape_string($connection,$_POST['username']);
-		$password= md5($_POST['hpassword']);
-		$repassword= md5($_POST['rpassword']);
-		//sqll query
-		//double quotes outside so we can use single quotes inside
-		if($password == $repassword)
-		{
 
-			$usersql="SELECT * FROM `events` WHERE husername='$husername'";
-			$checkuser=mysqli_query($connection, $usersql);
-			$countu=mysqli_num_rows($checkuser);
-			$emailsql="SELECT * FROM `events` WHERE hemail='$hemail'";
-			$checkemail=mysqli_query($connection, $emailsql);
-			$counte=mysqli_num_rows($checkemail);
-			if($counte==1 || $countu==1)
-			{
-				$fmsg = "username/email alredy exists";
-			}
-			else
-			{
-
-				$query="INSERT INTO `events` (fid,ename,edesc,erounds,participants,hname,addname,hmob,hemail,husername,hpassword) VALUES ('$fid','$ename','$edesc','$erounds', '$participants','$hname','$addname','$hmob','$hemail','$husername',
-                '$password')";
-				$result = mysqli_query($connection, $query);
-				//takes two arguments
-				if($result)
-				{
-					$smsg = "Event Added Successfully.".mysqli_error($connection);
-				}
-				else
-				{
-					$fmsg = "Event Head Registration Failed";
-				}
-			}
-		}
-		else
-		{
-			$fmsg="Password Doesn't Match";
-		}
-	}
+if (isset($_POST['staffdetailsubmit']))
+{
+//$a=$_POST["sid"];
+$b=$_POST["fname"];
+$c=$_POST["lname"];
+$d=$_POST["semail"];
+$e=$_POST["smobile"];
+$f=$_POST["susername"];
+$g=$_POST["spassword"];
+$iquery="insert into staffdetails(sfname,slname,semail,smobile,susername,spassword)values('$b','$c',$d,$e,'$f','$h')";
+if($mysql->query($iquery))
+{
+    echo "Staff details added successfully!!!";
+}
+}
 ?>
 
 <!DOCTYPE html>
@@ -129,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				<div class="row">
 				<div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title m-b-0">Event Information</h3>
+                            <h3 class="box-title m-b-0">Staff Information</h3>
                             <hr>
                             <form data-toggle="validator" method="post">
                               <?php if(isset($fmsg)) { ?>
@@ -145,27 +105,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 									</div>
 							<?php }?>
 
-                         		<div class="row">
-                                	<div class="col-md-12">
-                                       <div class="form-group">
-                                        	 <label class="control-label">Event Name</label>
-											<div class="col-sm-12 p-l-0">
-												<div class="input-group">
-													<!--<div class="input-group-addon">Dr.</div>-->
-													<input type="text" name="ename" class="form-control" id="ename" placeholder="Enter event name" required>
-													<!--onKeyUp="copyTextValue();"-->
-												</div>
-											</div>
-                                         </div>
-                                    </div>
-                                    <!--/span-->
-									 
-                                    <!--/span-->
-                                 </div>
+   
 
                                 <div class="form-group">
-                                    <label for="edecription" class="control-label">Event Description</label>
-                                    <textarea type="text" class="form-control" autocomplete="off" id="edesc" name="edesc" placeholder="Enter event description" required></textarea>
+                                    <label for="edecription" class="control-label">First Name</label>
+                                    <input type="text" class="form-control" autocomplete="off" id="edesc" name="fname" placeholder="Enter first name" required></textarea>
                                     <!-- username check start 
 										<div>
 										<span id="usernameLoading"><img src="../plugins/images/busy.gif" alt="Ajax Indicator" height="15" width="15" /></span>
@@ -174,8 +118,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				                     <!-- username check end -->
                                 </div>
                                  <div class="form-group">
-                                    <label for="inputName1" class="control-label">Event Rounds</label>
-                                     <input type="text" name="erounds" class="form-control" id="erounds" placeholder="Enter number of rounds" required>
+                                    <label for="inputName1" class="control-label">Last Name</label>
+                                     <input type="text" name="lname" class="form-control" id="erounds" placeholder="Enter last name" required>
                                    
                                     <!-- username check start 
 										<div>
@@ -186,8 +130,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 
                                  <div class="form-group">
-                                    <label for="inputName1" class="control-label">Number of Participants</label>
-                                    <input type="text" class="form-control" autocomplete="off" id="participants" name="participants" placeholder="Enter number of participants" required>
+                                    <label for="inputName1" class="control-label">Email</label>
+                                    <input type="text" class="form-control" autocomplete="off" id="participants" name="semail" placeholder="Enter Email id" required>
                                     <!-- username check start 
 										<div>
 										<span id="usernameLoading"><img src="../plugins/images/busy.gif" alt="Ajax Indicator" height="15" width="15" /></span>
@@ -199,20 +143,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="row">
                                 	<div class="col-md-12">
                                        <div class="form-group">
-                                        	 <label class="control-label">Event Head Name</label>
+                                        	 <label class="control-label">Mobile Number</label>
 											<div class="col-sm-12 p-l-0">
 												<div class="input-group">
 													<!--<div class="input-group-addon">Dr.</div>-->
-													<input type="text" name="hname" class="form-control" id="hname" placeholder="Enter one event head name" required>
+													<input type="text" name="smobile" class="form-control" id="hname" placeholder="Enter mobile number" required>
 													<!--onKeyUp="copyTextValue();"-->
                                                 </div><br></div>
-                                           <div class="col-sm-12 p-l-0">
-                                                <div class="input-group">
-													<!--<div class="input-group-addon">Dr.</div>-->
-													<input type="text" name="addname" class="form-control" id="addame" placeholder="Enter Additional event head name[separate by commas]" required>
-													<!--onKeyUp="copyTextValue();"-->
-												</div>
-											</div>
+                                          
                                          </div>
                                     </div>
                                     <!--/span-->
@@ -243,31 +181,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>-->
 
-                                <div class="form-group">
-                                    <label for="example-phone">Event Head Mobile Number </label>
-                                        <input type="text" required id="example-phone" name="hmob" class="form-control" placeholder="enter mobile number(multiple numbers separate by commas)" data-error="Invalid mobile number">
+                                <!--<div class="form-group">
+                                    <label for="example-phone">Staff user name </label>
+                                        <input type="text" required id="example-phone" name="hmob" class="form-control" placeholder="Enter staff user name " data-error="Invalid mobile number">
 										<div class="help-block with-errors"></div>
                                 </div>
                                  <div class="form-group">
-                                    <label for="inputEmail" class="control-label">Event Head Email</label>
-                                    <input type="email" name="hemail" class="form-control" id="inputEmail" placeholder="Enter the email" data-error="This email address is invalid" required>
+                                    <label for="inputEmail" class="control-label">Staff password</label>
+                                    <input type="email" name="hemail" class="form-control" id="inputEmail" placeholder="Enter staff password" data-error="This email address is invalid" required>
                                     <div class="help-block with-errors"></div>
-                                </div>
+                                </div>-->
                                  <div class="form-group">
-                                    <label for="inputName1" class="control-label">Event Head Username</label>
-                                    <input type="text" class="form-control" autocomplete="off" id="username" name="username" placeholder="Username is used to login" required>
+                                    <label for="inputName1" class="control-label">Staff Username</label>
+                                    <input type="text" class="form-control" autocomplete="off" id="username" name="susername" placeholder="Enter staff username" required>
                                     <!-- username check start -->
-										<div>
+									<!--	<div>
 										<span id="usernameLoading"><img src="../plugins/images/busy.gif" alt="Ajax Indicator" height="15" width="15" /></span>
 										<span id="usernameResult" style="color: #E40003"></span>
 										</div>
 				                     <!-- username check end -->
-                                </div>
+                               </div>
                                 <div class="form-group">
-                                    <label for="inputPassword" class="control-label">Event Head Password</label>
+                                    <label for="inputPassword" class="control-label">Staff Password</label>
                                     <div class="row">
                                         <div class="form-group col-sm-6">
-                                            <input type="password" name="hpassword" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+                                            <input type="password" name="spassword" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" placeholder="Enter password" required>
                                             <span class="help-block">Minimum of 6 characters</span> </div>
                                         <div class="form-group col-sm-6">
                                             <input type="password" name="rpassword" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Passwords don't match" placeholder="Confirm" required>
@@ -283,7 +221,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>-->
                                 <div class="form-group">
-                                    <center><button type="submit" name="eventheadsubmit" class="btn btn-info">Submit</button></center>
+                                    <center><button type="submit" name="staffdetailsubmit" class="btn btn-info">Submit</button></center>
                                 </div>
                             </form>
                         </div>
