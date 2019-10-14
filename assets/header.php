@@ -1,4 +1,4 @@
-<div id="lgx-header" class="lgx-header">
+<div id="lgx-header" class="lgx-header" style="background-color: #1b112c;">
         <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed "> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
             <div class="lgx-container" > <!--lgx-container-fluid-->
                 <nav class="navbar navbar-default lgx-navbar">

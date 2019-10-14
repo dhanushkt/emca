@@ -40,7 +40,7 @@
                             <div class="lgx-banner-info" > <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
                                 
                                 <h2 class="title">SAMCA <span><b>2</b><b>0</b><b>1</b><b>9</b></span></h2>
-								<h5 style="font-size: 30pt;" class="subtitle">where Skills Are Mastered and Competitiveness is Awarded.</h5>
+								<h3 style="font-size: 30px;" class="subtitle"><span id="lgx-typed-string">where Skills Are Mastered and Competitiveness is Awarded.</span></h3>
 <!--
                                 <h3 class="date"><i class="fa fa-calendar"></i> 23-27 September, 2018</h3>
                                 <h3 class="location"><i class="fa fa-map-marker"></i> 21 King Street, Dhaka 1205, Bangladesh.</h3>
@@ -74,12 +74,12 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="lgx-about-content-area">
                             <div class="lgx-heading">
-                                <h2 style="font-size: 30pt" class="heading">Student Association of MCA</h2>
-<!--                                <h3 class="subheading">...</h3>-->
+                                <h2 style="font-size: 4vh" class="heading">Student Association of MCA</h2>
+                              <h3 class="subheading"></h3>
                             </div>
                             <div class="lgx-about-content">
                                 <p class="text">
-                                    
+                                  is a association under MCA department of NMAMIT, Nitte and organised my 2nd year MCA students, SAMCA creates opportunities for leadership development, learning, fostering of shared interests and provides platform to showcase your telents through different events and activities.  
                                 </p>
 <!--
                                 <div class="section-btn-area">
@@ -163,11 +163,11 @@
                             <div class="lgx-gallery-area">
                                 <div  class="lgx-gallery-single">
                                     <figure>
-                                        <img title="Memories One" src="http://placehold.it/1000x732" alt="Memories one"/>
+                                        <img title="Teachers Day" src="assets/images/tday1.jpg" alt="Teachers Day"/>
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories One" href="http://placehold.it/1000x732">
+                                                    <a title="Teachers Day" href="assets/images/tday1.jpg">
                                                         <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
@@ -177,11 +177,11 @@
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     <figure>
-                                        <img src="http://placehold.it/1000x732" alt="Memories Two" title="Memories Two" />
+                                        <img src="assets/images/tday2.jpg" alt="Teachers Day" title="Teachers Day" />
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories Two" href="http://placehold.it/1000x732">
+                                                    <a title="Teachers Day" href="assets/images/tday2.jpg">
                                                         <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
@@ -191,11 +191,11 @@
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     <figure>
-                                        <img src="http://placehold.it/1000x732" alt="Memories Three" title="Memories Three" />
+                                        <img src="assets/images/tday3.jpg" alt="Teachers Day" title="Teachers Day" />
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories Three" href="http://placehold.it/1000x732">
+                                                    <a title="Teachers Day" href="assets/images/tday3.jpg">
                                                         <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
@@ -205,11 +205,11 @@
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     <figure>
-                                        <img src="http://placehold.it/1000x732" alt="Memories Four" title="Memories Four" />
+                                        <img src="assets/images/rangoli1.jpg" alt="Rangoli" title="Rangoli" />
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories Four" href="http://placehold.it/1000x732">
+                                                    <a title="Rangoli" href="assets/images/rangoli1.jpg">
                                                         <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
@@ -219,11 +219,11 @@
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     <figure>
-                                        <img src="http://placehold.it/1000x732" alt="Memories Five" title="Memories Five" />
+                                        <img src="assets/images/rangoli2.jpg" alt="Rangoli" title="Rangoli" />
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories Five" href="http://placehold.it/1000x732">
+                                                    <a title="Rangoli" href="assets/images/rangoli2.jpg">
                                                         <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
@@ -233,11 +233,11 @@
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     <figure>
-                                        <img src="http://placehold.it/1000x732" alt="Memories Six" title="Memories Six" />
+                                        <img src="assets/images/rangoli3.jpg" alt="Rangoli" title="Rangoli" />
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories Six" href="http://placehold.it/1000x732">
+                                                    <a title="Rangoli" href="assets/images/rangoli3.jpg">
                                                         <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
