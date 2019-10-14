@@ -1,5 +1,19 @@
 <?php
-include '../../access/connect.php';
+include '../access/connect.php';
+
+if(isset($_GET['fname']))
+   $fname=$_GET['fname'];
+if(isset($_GET['lname']))
+   $lname=$_GET['lname'];
+if(isset($_GET['email']))
+   $email=$_GET['email'];
+if(isset($_GET['mob']))
+   $mob=$_GET['mob'];
+if(isset($_GET['usn']))
+   $usn=$_GET['usn'];
+if(isset($_GET['batch']))
+   $batch=$_GET['batch'];
+
 if(isset($_POST['sub'])) {
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
@@ -41,6 +55,7 @@ if(isset($_POST['sub'])) {
 	<head>
 		<?php include 'admin/ui/csslink.php'; ?>
 		<!--begin::Page Custom Styles(used by this page) -->
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png"/>
 		<link href="assets/css/pages/login/login-4.css" rel="stylesheet" type="text/css" />
 		<!--end::Page Custom Styles -->
 		<style>
@@ -272,7 +287,7 @@ if(isset($_POST['sub'])) {
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-user"></i></a></div>
 													
-													<input required type="text" name="fname" class="form-control" placeholder="Enter first name">
+													<input <?php if(isset($fname)) echo "value='$fname'"; ?> required type="text" name="fname" class="form-control" placeholder="Enter first name">
 												</div>
 											</div>
 											<div class="col-lg-6">
@@ -280,7 +295,7 @@ if(isset($_POST['sub'])) {
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-user"></i></a></div>
 													
-													<input required type="text" name="lname" class="form-control" placeholder="Enter last name">
+													<input <?php if(isset($lname)) echo "value='$lname'"; ?> required type="text" name="lname" class="form-control" placeholder="Enter last name">
 												</div>
 											</div>
 											
@@ -290,7 +305,7 @@ if(isset($_POST['sub'])) {
 												<label class="">Email :</label>
 												<div class="input-group">
 												<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-envelope"></i></a></div>
-												<input type="email" name="eid" class="form-control" placeholder="Enter Email address">
+												<input <?php if(isset($email)) echo "value='$email'"; ?> type="email" name="eid" class="form-control" placeholder="Enter Email address">
 												</div>
 <!--						<span class="form-text text-muted">Please enter your contact number</span>-->
 											</div>
@@ -298,7 +313,7 @@ if(isset($_POST['sub'])) {
 												<label class="">Phone Number :</label>
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-phone"></i></a></div>
-													<input required type="text" class="form-control" name="phone" placeholder="Enter phone">
+													<input <?php if(isset($mob)) echo "value='$mob'"; ?> required type="text" class="form-control" name="phone" placeholder="Enter phone">
 												</div>
 							
 											</div>
@@ -308,18 +323,18 @@ if(isset($_POST['sub'])) {
 												<label class="">Roll Number or USN :</label>
 												<div class="input-group">
 													<div class="input-group-append"><a href="#" class="btn btn-brand btn-icon"><i class="la la-mortar-board"></i></a></div>
-													<input required type="text" class="form-control" name="usn" placeholder="Enter roll number or usn">
+													<input <?php if(isset($usn)) echo "value='$usn'"; ?> required type="text" class="form-control" name="usn" placeholder="Enter roll number or usn">
 												</div>
 											</div>
 											<div class="col-lg-6">
 												<label style="padding-bottom: 10px">Select batch :</label>
 													<br>
 													<label class="container1"> Regular (3 years)
-													<input required type="radio" name="type" value="regular">
+													<input <?php if(isset($batch) && $batch=='regular') echo 'checked'; ?> required type="radio" name="type" value="regular">
   													<span class="checkmark1"></span>
 													</label>
 													<label class="container1"> Lateral (2 years)
-													<input required type="radio" name="type" value="lateral">
+													<input <?php if(isset($batch) && $batch=='lateral') echo 'checked'; ?> required type="radio" name="type" value="lateral">
   													<span class="checkmark1"></span>
 													</label>
 											</div>
