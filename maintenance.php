@@ -82,20 +82,20 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body class="home">
+<body class="home" style="background-image: url(assets/img/bg-2.jpg);">
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="lgx-container">
+<div class="lgx-container" >
 <!-- ***  ADD YOUR SITE CONTENT HERE *** -->
 
 
 <!--BANNER-->
 <section>
-    <div class="lgx-banner lgx-banner-comingsoon" style="background-image: url(assets/img/bg-2.jpg);">
+    <div class="">
         <div class="lgx-banner-style">
             <div class="lgx-inner lgx-inner-fixed" style="padding-top: 50px;">
                 <div class="container">
@@ -105,16 +105,18 @@
 								
 								<img width="450" height="250" src="assets/img/samca1.png">
 <!--                                <h5 class="subtitle">Department of MCA</h5>-->
-                                <h2 class="title">We are Coming Soon</h2>
-                                <h3 class="location"><i class="fa fa-map-marker"></i> NMAMIT, Nitte, Karkala.</h3>
+                                <h2 style="padding-top: 20px;" class="title">Website is under Maintenance</h2>
+                                <h3 class="location"><i class="fa fa-map-markers"></i> We will be back soon!</h3>
+<!--
                                 <div class="action-area">
                                     <div class="lgx-video-area">
 										<a class="lgx-btn lgx-btn-blue" href="form.php">Register</a>
                                     </div>
                                 </div>
+-->
                                 <div class="lgx-countdown-area lgx-countdown-simple">
                                     <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
-                                    <div id="lgx-countdown" data-date="2019/10/01"></div>
+                                    <div id="lgx-countdown" data-date="2019/10/17"></div>
                                 </div>
                             </div>
                         </div>
