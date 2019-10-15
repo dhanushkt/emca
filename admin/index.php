@@ -1,6 +1,6 @@
 <?php
 include '../login/accesscontroladmin.php';
-$ausername=$_SESSION['admin'];
+$ausername=$_SESSION['ausername'];
 require('../access/connect.php');
 
 $getstudno=mysqli_query($connection, "SELECT * FROM student student WHERE batch='2018' AND type='regular'");
