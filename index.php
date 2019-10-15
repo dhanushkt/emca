@@ -79,7 +79,7 @@
                             </div>
                             <div class="lgx-about-content">
                                 <p class="text">
-                                  is a association under MCA department of NMAMIT, Nitte and organised my 2nd year MCA students, SAMCA creates opportunities for leadership development, learning, fostering of shared interests and provides platform to showcase your telents through different events and activities.  
+                                  it is a association under MCA department of NMAMIT, Nitte, SAMCA creates opportunities for leadership development, learning, fostering of shared interests and provides platform to showcase your telents through different events and activities.  
                                 </p>
 <!--
                                 <div class="section-btn-area">
