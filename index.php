@@ -74,14 +74,12 @@
                             </div>
                             <div class="lgx-about-content">
                                 <p class="text">
-                                  it is a association under MCA department of NMAMIT, Nitte, SAMCA creates opportunities for leadership development, learning, fostering of shared interests and provides platform to showcase your telents through different events and activities.  
+                                  it is a association under MCA department of NMAMIT, Nitte, SAMCA creates opportunities for leadership development, learning, fostering of shared interests and provides platform to showcase your talents through different events and activities.  
                                 </p>
-<!--
                                 <div class="section-btn-area">
-                                    <a class="lgx-btn" href="about.html">More About</a>
-                                    <a class="lgx-btn lgx-btn-red lgx-scroll" href="#lgx-registration">Buy Ticket</a>
+<!--                                    <a class="lgx-btn" href="about.html">More About</a>-->
+                                    <a class="lgx-btn lgx-btn-red lgx-scroll" href="team.php">TEAM SAMCA</a>
                                 </div>
--->
                             </div>
                         </div>
                     </div>

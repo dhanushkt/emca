@@ -52,7 +52,7 @@
 
                 <div class="lgx-footer-bottom">
                     <div class="lgx-copyright">
-                        <p> <span>©</span> 2019 Designed and Developed by <a href="#">Dhanush KT.</a> </p>
+                        <p> <span>©</span> 2019 Designed and Developed by <a href="team.php#devteam">Dev Team.</a> </p>
                     </div>
                 </div>
 

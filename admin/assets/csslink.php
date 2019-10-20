@@ -1,8 +1,12 @@
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="eMCA">
     <meta name="author" content="D4">
 <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-    <title>OFMS</title>
+    <title>SAMCA 2019</title>
     <!-- Bootstrap Core CSS -->
     <link href="../plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
