@@ -23,8 +23,8 @@
                         </div>
                         <ul class="nav navbar-nav lgx-nav navbar-right">
                             <li>
-                                <a href="index.php" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                            <li>
+                                <a href="index.php" class="lgx-scroll active">Home</a>
+                            </li>
 							<li><a class="lgx-scroll" href="#lgx-about">About</a></li>
 							<li><a class="lgx-scroll" href="https://nmamit.nitte.edu.in/index.php">NITTE</a></li>
                         </ul>
