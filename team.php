@@ -112,8 +112,8 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Praneeth J Shetty</a></h3>
                                             <h4 class="subtitle"><b>President</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> praneethjshetty@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 8197488955</h6>
+                                            <a class="chover" href="mailto:praneethjshetty@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> praneethjshetty@gmail.com</h6></a>
+											<a class="chover" href="tel:+918197488955"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 8197488955</h6></a>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -129,8 +129,9 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Babitha Shetty</a></h3>
                                             <h4 class="subtitle"><b>Secretary</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> babithavtl9@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9632281509</h6>
+                                            <a class="chover" href="mailto:babithavtl9@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> babithavtl9@gmail.com</h6></a>
+											<a class="chover" href="tel:+919632281509"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9632281509</h6></a>                                            
+											
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -141,15 +142,15 @@
                                     <figcaption>
                                         <div class="social-group">
                                         
-                                            <a class="sp-fb" href="https://m.facebook.com/rayesh.pai.9?ref=bookmarks"><i class="fa fa-facebook"></i></a>
+                                            <a class="sp-fb" href="https://facebook.com/rayesh.pai.9"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/rayesh_1818_"><i class="fa fa-instagram"></i></a>
                                            
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Rayesh Pai</a></h3>
                                             <h4 class="subtitle"><b>Semaphore Secretary</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> raypai1818@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9740474327</h6>
+                                            <a class="chover" href="mailto:raypai1818@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> raypai1818@gmail.com</h6></a>
+											<a class="chover" href="tel:+919740474327"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9740474327</h6></a>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -167,8 +168,8 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Aditi Harish</a></h3>
 											<h4 class="subtitle"><b>Cultural Secretary</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> aditiharish96@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 7022405712</h6>
+                                            <a class="chover" href="mailto:aditiharish96@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> aditiharish96@gmail.com</h6></a>
+											<a class="chover" href="tel:+917022405712"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 7022405712</h6></a>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -182,15 +183,12 @@
                                 <figure>
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/nithikth.png" alt="Speaker"/></a>
                                     <figcaption>
-                                        <div class="social-group">
-                                            <a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a>
-                                            <a class="sp-insta" href="#"><i class="fa fa-instagram"></i></a>
-                                        </div>
+                                     
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Nitiketh Nayak</a></h3>
                                             <h4 class="subtitle"><b>Sports Secretary</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> nayaknitiketh22@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 7760889553</h6>
+                                            <a class="chover" href="mailto:nayaknitiketh22@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> nayaknitiketh22@gmail.com</h6></a>
+											<a class="chover" href="tel:+917760889553"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 7760889553</h6></a>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -200,14 +198,13 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/rashmitha.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/rashmitha653"><i class="fa fa-instagram"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Rashmitha shetty</a></h3>
                                             <h4 class="subtitle"><b>Window Secretary</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> rashmitha653@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9148724330</h6>
+                                            <a class="chover" href="mailto:rashmitha653@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> rashmitha653@gmail.com</h6></a>
+											<a class="chover" href="tel:+919148724330"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9148724330</h6></a>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -223,8 +220,10 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Sanath Aithal</a></h3>
 											<h4 class="subtitle"><b>Window Secretary</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> sanathsaithal@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9108824170</h6>
+                                            <a class="chover" href="mailto:sanathsaithal@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> sanathsaithal@gmail.com</h6></a>
+											<a class="chover" href="tel:+919108824170"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9108824170</h6></a>
+                                            
+											
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -242,8 +241,9 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Govind Chowdari</a></h3>
                                             <h4 class="subtitle"><b>Treasurer</b></h4>
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> govindchowdari16@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 7829909213</h6>
+                                            <a class="chover" href="mailto:govindchowdari16@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> govindchowdari16@gmail.com</h6></a>
+											<a class="chover" href="tel:+917829909213"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 7829909213</h6></a>
+                                       
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -291,8 +291,10 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Vignesh Pai</a></h3>
 <!--                                            <h4 class="subtitle"><b>Development Team</b></h4>-->
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> vigneshpai43@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9449355988</h6>
+                                            <a class="chover" href="mailto:vigneshpai43@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> vigneshpai43@gmail.com</h6></a>
+											<a class="chover" href="tel:+919449355988"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9449355988</h6></a>
+                                           
+					
                                         </div>
                                     </figcaption>
                                 </figure>
