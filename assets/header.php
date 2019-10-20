@@ -25,7 +25,7 @@
                             <li>
                                 <a href="index.php" class="lgx-scroll active">Home</a>
                             </li>
-							<li><a class="lgx-scroll" href="#lgx-about">About</a></li>
+							<li><a class="lgx-scroll" href="index.php#lgx-about">About</a></li>
 							<li><a class="lgx-scroll" href="team.php">Team</a></li>
 							<li><a class="lgx-scroll" href="https://nmamit.nitte.edu.in/index.php">NITTE</a></li>
                         </ul>

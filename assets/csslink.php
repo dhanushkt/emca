@@ -65,6 +65,9 @@
 
 <!-- pre loader -->
 <style type="text/css">
+	html {
+  scroll-behavior: smooth;
+}
 	.spinner-wrapper {
 position: fixed;
 top: 0;

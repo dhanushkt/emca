@@ -14,7 +14,7 @@
 		}
 	}
 		.speaker-info .chover .subtitle:hover{
-			color: aqua !important;
+			color: #FFFFFF !important;
 		}
 	</style>
 </head>

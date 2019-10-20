@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="lgx-footer-area">
                     <div class="lgx-footer-single">
-                        <a class="logo" href="index.html"><img src="assets/img/footer-logo.png" alt="Logo"></a>
+                        <a class="logo" href="index.php"><img src="assets/img/footer-logo.png" alt="Logo"></a>
                     </div> <!--//footer-area-->
                     <div class="lgx-footer-single">
                         <h3 class="footer-title"> </h3>
