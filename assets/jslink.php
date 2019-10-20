@@ -46,3 +46,17 @@
 
 <!-- CUSTOM SCRIPT  -->
 <script src="assets/js/custom.script.js"></script>
+
+<script>
+$(document).ready(function() {
+//Preloader
+$(window).on("load", function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+});
+</script>

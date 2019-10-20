@@ -3,8 +3,47 @@ include '../login/accesscontroladmin.php';
 require('../access/connect.php');
 $ausername=$_SESSION['ausername'];
 
+if(isset($_POST['filter']))
+{
+	$fbatch=$_POST['fbatch'];
+	$ftype=$_POST['ftype'];
+	echo "<script>window.location.href='view-students.php?fbatch=$fbatch&ftype=$ftype'</script>";
+}
 
-    
+$gfbatch='all';
+$gftype='all';
+
+if(isset($_GET['fbatch']))
+	$gfbatch=$_GET['fbatch'];
+
+if(isset($_GET['ftype']))
+	$gftype=$_GET['ftype'];
+
+if($gfbatch=='all' && $gftype=='all')
+{
+	$getstud=mysqli_query($connection, "SELECT * FROM student");
+	$getstud2=mysqli_query($connection, "SELECT * FROM student JOIN skills ON student.studid=skills.studid");
+	$txt="ALL";
+}
+if($gfbatch!='all' && $gftype!='all')
+{
+	$getstud=mysqli_query($connection, "SELECT * FROM student WHERE batch='$gfbatch' AND type='$gftype'");
+	$getstud2=mysqli_query($connection, "SELECT * FROM student JOIN skills ON student.studid=skills.studid WHERE batch='$gfbatch' AND type='$gftype'");
+	$txt="$gfbatch , $gftype";
+}
+if($gfbatch=='all' && $gftype!='all')
+{
+	$getstud=mysqli_query($connection, "SELECT * FROM student WHERE type='$gftype'");
+	$getstud2=mysqli_query($connection, "SELECT * FROM student JOIN skills ON student.studid=skills.studid WHERE type='$gftype'");
+	$txt="ALL , $gftype";
+}
+if($gfbatch!='all' && $gftype=='all')
+{
+	$getstud=mysqli_query($connection, "SELECT * FROM student WHERE batch='$gfbatch'");
+	$getstud2=mysqli_query($connection, "SELECT * FROM student JOIN skills ON student.studid=skills.studid WHERE batch='$gfbatch'");
+	$txt="$gfbatch , ALL";
+}
+
     
 ?>
 <!DOCTYPE html>
@@ -56,25 +95,40 @@ $ausername=$_SESSION['ausername'];
 				<div class="row">
 				<div class="col-sm-12">
                         <div class="white-box" >
+							<form method="post">
 							<div class="row" style="padding-bottom: 30px;">
                                 <div class="col-md-4">
                                     <h5 class="m-t-30 m-b-10">Select Batch</h5>
-                                    <select class="selectpicker" data-style="form-control">
-                                        <option>All</option>
-                                        <option>2018</option>
-                                        <option>2019</option>
+                                    <select name="fbatch" class="selectpicker" data-style="form-control">
+                                        <option <?php if($gfbatch=='all') echo 'selected'; ?> value="all">All</option>
+                                        <option <?php if($gfbatch=='2018') echo 'selected'; ?> value="2018">2018</option>
+                                        <option <?php if($gfbatch=='2019') echo 'selected'; ?> value="2019">2019</option>
                                     </select>
                                 </div>
 								<div class="col-md-4">
                                     <h5 class="m-t-30 m-b-10">Select Type</h5>
-                                    <select class="selectpicker" data-style="form-control">
-                                        <option>All</option>
-                                        <option>Regular</option>
-                                        <option>Lateral</option>
+                                    <select name="ftype" class="selectpicker" data-style="form-control">
+                                        <option <?php if($gftype=='all') echo 'selected'; ?> value="all">All</option>
+                                        <option <?php if($gftype=='regular') echo 'selected'; ?> value="regular">Regular</option>
+                                        <option <?php if($gftype=='lateral') echo 'selected'; ?> value="lateral">Lateral</option>
                                     </select>
                                 </div>
+								<div class="col-md-4">
+									<button type="submit" class="btn btn-success" style="margin-top: 50px" name="filter">Filter</button>
+								</div>
 							</div>
-                            <div class="table-responsive">
+                            </form>
+                        </div>
+                    </div>
+				</div>
+		
+				<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">Students Information [ <?php echo $txt; ?> ]</div>
+						<div class="panel-wrapper collapse in" aria-expanded="true">
+							<div class="panel-body">
+								<div class="table-responsive">
                                 <table id="example23" class="display nowrap " cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
@@ -88,7 +142,7 @@ $ausername=$_SESSION['ausername'];
                                     </thead>
                                     <tbody>
 										<?php
-										$getstud=mysqli_query($connection, "SELECT * FROM student");
+										
 										foreach($getstud as $key=>$getstud)
 										{
 										?>
@@ -104,9 +158,63 @@ $ausername=$_SESSION['ausername'];
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
+								
+							</div>
+						</div>
+					</div>
 				</div>
+			</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">Talent Information [ <?php echo $txt; ?> ]</div>
+						<div class="panel-wrapper collapse in" aria-expanded="true">
+							<div class="panel-body">
+								<div class="table-responsive">
+                                <table id="example24" class="display" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>USN</th>
+                                            <th>Name</th>
+                                            <th>Talents</th>
+                                            <th>More Info</th>
+                                            <th>Events Worked in</th>
+											<th>Events Paritipated</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+										<?php
+				
+										foreach($getstud2 as $key1=>$getstud2)
+										{
+											if($getstud2['sexpr']!='0')
+												$expr=$getstud2['sexpr'];
+											else
+												$expr="";
+											if($getstud2['sevents']!='0')
+												$events=$getstud2['sevents'];
+											else
+												$events="";
+										?>
+                                        <tr>
+                                            <td><?php echo $getstud2['usn']; ?></td>
+                                            <td><?php echo $getstud2['fname']." ".$getstud['lname']; ?></td>
+                                            <td><?php  echo $getstud2['talents']; ?></td>
+                                            <td><?php echo $getstud2['addtalents']; ?></td>
+                                            <td><?php echo $expr;  ?></td>
+											<td><?php echo $events; ?></td>
+                                        </tr>
+										<?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
                
             </div>
             <!-- /.container-fluid -->
@@ -172,6 +280,54 @@ $ausername=$_SESSION['ausername'];
         });
     });
     $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+    </script>
+	<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+		$('#example24').DataTable();
+        $(document).ready(function() {
+            var table = $('#example').DataTable({
+                "columnDefs": [{
+                    "visible": false,
+                    "targets": 2
+                }],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+            // Order by the grouping
+            $('#example tbody').on('click', 'tr.group', function() {
+                var currentOrder = table.order()[0];
+                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                    table.order([2, 'desc']).draw();
+                } else {
+                    table.order([2, 'asc']).draw();
+                }
+            });
+        });
+    });
+    $('#example24').DataTable({
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'

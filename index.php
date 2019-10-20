@@ -7,12 +7,7 @@
 
 <body class="home">
 	
-<div class="spinner-wrapper">
-<div class="spinner">
-	<div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div></div>
-</div>
+ <?php include 'assets/preloader.php'; ?>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -273,18 +268,6 @@
 
 </div>
 <?php include 'assets/jslink.php'; ?>
-	<script>
-$(document).ready(function() {
-//Preloader
-$(window).on("load", function() {
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = $('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
-}
-hidePreloader();
-});
-});
-</script>
+	
 </body>
 </html>
