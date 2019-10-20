@@ -259,8 +259,8 @@
                             </div>
 					
                     <div class="row" >
-                        <div class="col-xs-12 customstyle2" >
-							 <div class="lgx-col4 lgx-single-speaker2">
+                        <div class="col-xs-12" >
+							 <div class="lgx-col4 lgx-single-speaker2 customstyle2">
                                 <figure>
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/dhanush.png" alt="Speaker"/></a>
                                     <figcaption>
