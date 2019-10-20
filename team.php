@@ -101,10 +101,10 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/praneeth.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
-                                            <a class="sp-fb" href="https://www.facebook.com/govind.chowdari"><i class="fa fa-facebook"></i></a>
-                                            <a class="sp-insta" href="https://www.instagram.com/kik_kat06"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
+                                            <a class="sp-tw" href="https://twitter.com/dj_praneeth_"><i class="fa fa-twitter"></i></a>
+                                            <a class="sp-fb" href="https://www.facebook.com/praneeth.shetty.73"><i class="fa fa-facebook"></i></a>
+                                            <a class="sp-insta" href="https://www.instagram.com/Dj_praneeth"><i class="fa fa-instagram"></i></a>
+                                            <a class="sp-in" href="https://www.linkedin.com/in/praneeth-shetty-68314617b"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Praneeth J Shetty</a></h3>
@@ -120,10 +120,8 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/babitha.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
                                             <a class="sp-fb" href="https://www.facebook.com/babitha.shetty.1804"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/babithashettyk"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Babitha Shetty</a></h3>
@@ -139,10 +137,10 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/rayesh.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
+                                        
                                             <a class="sp-fb" href="https://m.facebook.com/rayesh.pai.9?ref=bookmarks"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/rayesh_1818_"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
+                                           
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Rayesh Pai</a></h3>
@@ -158,10 +156,10 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/aditi.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
+                                          
                                             <a class="sp-fb" href="https://www.facebook.com/aditi.harish.7"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/ad_it_ti"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
+                                           
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Aditi Harish</a></h3>
@@ -182,10 +180,8 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/nithikth.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
                                             <a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="#"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Nitiketh Nayak</a></h3>
@@ -201,10 +197,8 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/rashmitha.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
                                             <a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/rashmitha653"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Rashmitha shetty</a></h3>
@@ -220,10 +214,8 @@
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/sanath.png" alt="Speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
                                             <a class="sp-fb" href="https://www.facebook.com/sanaths.aithal"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/sanath_s_aithal"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Sanath Aithal</a></h3>
@@ -241,10 +233,8 @@
                                     <figcaption>
 										<div class="devteam" id="devteam"></div>
                                         <div class="social-group">
-                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
                                             <a class="sp-fb" href="https://www.facebook.com/govind.chowdari"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/kik_kat06"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Govind Chowdari</a></h3>
@@ -260,16 +250,17 @@
                     </div>
                     <!--//.ROW-->
 					<!--//.ROW-->
-					
-                    <div class="row">
-                        <div class="col-xs-12" >
-							
-							<div class="lgx-heading" style="margin-top: 20px; margin-bottom: 10px">
+                    <div class="lgx-heading" style="margin-top: 20px; margin-bottom: 10px">
                                 <h2 style="font-size: 3vh" class="heading">Development Team</h2>
                               <h3 class="subheading"></h3>
                             </div>
+					
+                    <div class="row" >
+                        <div class="col-xs-12"  >
 							
-							 <div class="lgx-col4 lgx-single-speaker2">
+							
+							
+							 <div class="lgx-col4 lgx-single-speaker2"       >
                                 <figure>
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/dhanush.png" alt="Speaker"/></a>
                                     <figcaption>
@@ -296,7 +287,6 @@
                                             <a class="sp-tw" href="https://github.com/VigneshPai-hub"><i class="fa fa-github"></i></a>
                                             <a class="sp-fb" href="https://www.facebook.com/viggu.pai.1"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="https://www.instagram.com/its_viggu_here"><i class="fa fa-instagram"></i></a>
-                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Vignesh Pai</a></h3>
