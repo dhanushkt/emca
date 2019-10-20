@@ -5,6 +5,9 @@ require( '../access/connect.php' );
 date_default_timezone_set( 'Asia/Kolkata' );
 $date = date( "d-m-Y" );
 
+$id=$_GET['id'];
+$getstud=mysqli_query($connection, "SELECT * FROM student JOIN skills ON student.studid=skills.studid WHERE student.studid='$id'");
+$studinfo=mysqli_fetch_assoc($getstud);
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +61,7 @@ $date = date( "d-m-Y" );
 			<div class="row bg-title">
 				<!-- .page title -->
 				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-					<h4 class="page-title">Edit Profile</h4>
+					<h4 class="page-title">Student Profile</h4>
 				</div>
 				<!-- /.page title -->
 				<!-- .breadcrumb -->
@@ -94,12 +97,12 @@ $date = date( "d-m-Y" );
 							<div class="overlay-box">
 								<div class="user-content">
 									<a href="javascript:void(0)"> <img src="../plugins/images/users/user(2).png" class="thumb-lg img-circle" > </a>
+									<h3 class="text-white">
+										<?php echo $studinfo['fname']." ".$studinfo['lname']; ?>
+									</h3>
 									<h4 class="text-white">
-										<?php echo $ausername ?>
+										<?php echo strtoupper($studinfo["usn"]); ?>
 									</h4>
-									<h5 class="text-white">
-										<?php echo $row["aemail"]; ?>
-									</h5>
 								</div>
 							</div>
 						</div>
@@ -123,11 +126,11 @@ $date = date( "d-m-Y" );
 					<div class="white-box">
 						<ul class="nav customtab nav-tabs" role="tablist">
 							<!--<li role="presentation" class="nav-item"><a href="#home" class="nav-link " aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="fa fa-home"></i></span><span class="hidden-xs"> Activity</span></a></li>-->
-							<li role="presentation" class="nav-item"><a href="#profile" class="nav-link active" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="fa fa-user"></i></span> <span class="hidden-xs">Profile</span></a>
+							<li role="presentation" class="nav-item"><a href="#profile" class="nav-link active" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="fa fa-user"></i></span> <span class="hidden-xs">Info</span></a>
 							</li>
-							<li role="presentation" class="nav-item"><a href="#settings" class="nav-link" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="fa fa-cog"></i></span> <span class="hidden-xs">Setting</span></a>
+							<li role="presentation" class="nav-item"><a href="#settings" class="nav-link" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="fa fa-cog"></i></span> <span class="hidden-xs">Edit</span></a>
 							</li>
-							<li role="presentation" class="nav-item"><a href="#changepassword" class="nav-link" aria-controls="changepassword" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="fa fa-key"></i></span> <span class="hidden-xs">Change Password</span></a>
+							<li role="presentation" class="nav-item"><a href="#changepassword" class="nav-link" aria-controls="changepassword" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="fa fa-trash"></i></span> <span class="hidden-xs">Remove</span></a>
 							</li>
 							<!--
 							<li role="presentation" class="nav-item"><a href="#remove" class="nav-link" aria-controls="remove" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="fa fa-times"></i></span> <span class="hidden-xs">Remove Account</span></a>
@@ -136,26 +139,80 @@ $date = date( "d-m-Y" );
 						<div class="tab-content">
 							<div class="tab-pane active" id="profile">
 								<div class="row">
-									<div class="col-md-3 col-xs-6 b-r"> <strong>Username</strong>
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Name</strong>
 										<br>
 										<p class="text-muted">
-											<?php echo $ausername; ?>
+											<?php echo $studinfo['fname']." ".$studinfo['lname']; ?>
 										</p>
 									</div>
-									<div class="col-md-3 col-xs-6 "> <strong>Mobile</strong>
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
 										<br>
 										<p class="text-muted">
-											<?php echo $row["amobile"]; ?>
+											<?php echo $studinfo['phno']; ?>
 										</p>
 									</div>
 									<div class="col-md-6 col-xs-6 "> <strong>Email</strong>
 										<br>
 										<p class="text-muted">
-											<?php echo $row["aemail"]; ?>
+											<?php echo $studinfo['email']; ?>
 										</p>
 									</div>
 
 
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Batch</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['batch']; ?>
+										</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Type</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['type']; ?>
+										</p>
+									</div>
+									<div class="col-md-6 col-xs-6 "> <strong>USN</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['usn']; ?>
+										</p>
+									</div>
+								
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Talents</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['talents']; ?>
+										</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Talent Details</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['addtalents']; ?>
+										</p>
+									</div>
+								
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Event Conducted</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['sexpr']; ?>
+										</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r"> <strong>Events Participated</strong>
+										<br>
+										<p class="text-muted">
+											<?php echo $studinfo['sevents']; ?>
+										</p>
+									</div>
+								
 								</div>
 
 
@@ -164,20 +221,22 @@ $date = date( "d-m-Y" );
 
 							<div class="tab-pane" id="settings">
 								<form data-toggle="validator" method="post">
-
-
 									<div class="form-group">
-										<label for="inputName1" class="control-label">Username</label>
-										<input type="text" class="form-control" autocomplete="off" id="username" name="username" placeholder="Username is used to login" value="<?php echo $ausername ?>" required>
+										<label for="inputName1" class="control-label">First Name</label>
+										<input type="text" class="form-control" autocomplete="off" name="fname" placeholder="First Name" value="<?php echo $studinfo['fname'] ?>" required>
+									</div>
+									<div class="form-group">
+										<label for="inputName1" class="control-label">Last Name</label>
+										<input type="text" class="form-control" autocomplete="off" name="lname" placeholder="Last Name" value="<?php echo $studinfo['lname'] ?>" required>
 									</div>
 									<div class="form-group">
 										<label for="inputEmail" class="control-label">Email</label>
-										<input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" value="<?php echo $row['aemail']; ?>" data-error="This email address is invalid" required>
+										<input type="email" name="email" class="form-control" placeholder="Email" value="<?php echo $studinfo['email']; ?>" data-error="This email address is invalid" required>
 										<div class="help-block with-errors"></div>
 									</div>
 									<div class="form-group">
 										<label for="inputEmail" class="control-label">Mobile Number</label>
-										<input pattern="[0-9]*" minlength="10" maxlength="11" type="tel" name="amob" class="form-control" id="inputMobile" placeholder="Mobile Number" value="<?php echo $row['amobile']; ?>" data-error="This mobile number is invalid" required>
+										<input pattern="[0-9]*" minlength="10" maxlength="11" type="tel" name="amob" class="form-control" id="inputMobile" placeholder="Mobile Number" value="<?php echo $studinfo['phno']; ?>" data-error="This mobile number is invalid" required>
 										<div class="help-block with-errors"></div>
 									</div>
 
@@ -190,35 +249,9 @@ $date = date( "d-m-Y" );
 							</div>
 
 							<div class="tab-pane" id="changepassword">
-
-								<form data-toggle="validator" method="post">
-									<div class="form-group">
-										<label for="inputPassword" class="control-label">Change Password</label>
-										<div calss="row">
-											<div class="form-group col-sm-12 p-l-0 p-t-10">
-												<input type="password" name="oldpassword" data-toggle="validator" data-minlength="6" class="form-control" id="oldPassword" placeholder="Old Password" required>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="form-group col-sm-6">
-												<input type="password" name="newpassword" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" placeholder="New Password" required>
-												<span class="help-block">Minimum of 6 characters</span> </div>
-											<div class="form-group col-sm-6">
-												<input type="password" name="retypepassword" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Passwords don't match" placeholder="Confirm New Password" required>
-												<div class="help-block with-errors"></div>
-											</div>
-										</div>
+									<div class="form-group" style="padding-bottom: 0px; margin-bottom: 0px; text-align: center">
+										<button data-id="<?php echo $id; ?>" class="btn btn-danger deleteAdmin" name="changepw">Remove Student Record</button>
 									</div>
-									<div class="form-group" style="padding-bottom: 0px; margin-bottom: 0px">
-
-										<button class="btn btn-success" name="changepw">Change Password</button>
-
-									</div>
-
-								</form>
-
-
 							</div>
 							<!--
 							<div class="tab-pane" id="remove">
@@ -264,11 +297,11 @@ $date = date( "d-m-Y" );
 
 <script>
 	$( document ).ready( function () {
-		$( '.deleteAdmin' ).click( function () {
-			id = $( this ).attr( 'data-id' );
+		$('.deleteAdmin').click( function () {
+			id = $(this).attr('data-id');
 			swal( {
 				title: "Are you sure?",
-				text: "You will not be able to recover this account!",
+				text: "You will not be able to recover this data!",
 				type: "warning",
 				showCancelButton: true,
 				confirmButtonColor: "#DD6B55",
@@ -278,18 +311,18 @@ $date = date( "d-m-Y" );
 			}, function ( isConfirm ) {
 				if ( isConfirm ) {
 					$.ajax( {
-						url: 'deleteadmin.php?id=' + id,
-						type: 'DELETE',
+						url: 'deletestud.php?id='+id,
+						type: 'POST',
 						data: {
 							id: id
 						},
 						success: function () {
-							swal( "Deleted!", "User has been deleted.", "success" );
-							window.location.replace( "logout.php" );
+							swal( "Deleted!", "Data has been deleted.", "success" );
+							window.location.replace("view-students.php");
 						}
 					} );
 				} else {
-					swal( "Cancelled", "Admin account is safe :)", "error" );
+					swal("Cancelled", "Student data is safe :)", "error" );
 				}
 			} );
 		} );

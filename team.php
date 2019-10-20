@@ -10,9 +10,12 @@
 		}
 	.customstyle2
 		{
-			margin-left: 140px;
+			margin-left: 290px;
 		}
 	}
+		.speaker-info .chover .subtitle:hover{
+			color: aqua !important;
+		}
 	</style>
 </head>
 
@@ -173,7 +176,7 @@
                         </div>
                     </div>
                     <!--//.ROW-->
-                    <div class="row">
+                    <div class="row" style="padding-top: 20px">
                         <div class="col-xs-12" >
 							 <div class="lgx-col4 lgx-single-speaker2">
                                 <figure>
@@ -256,11 +259,8 @@
                             </div>
 					
                     <div class="row" >
-                        <div class="col-xs-12"  >
-							
-							
-							
-							 <div class="lgx-col4 lgx-single-speaker2"       >
+                        <div class="col-xs-12 customstyle2" >
+							 <div class="lgx-col4 lgx-single-speaker2">
                                 <figure>
                                     <a class="profile-img" href="JavaScript:Void(0);"><img src="assets/images/team/dhanush.png" alt="Speaker"/></a>
                                     <figcaption>
@@ -273,8 +273,8 @@
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="JavaScript:Void(0);">Dhanush KT</a></h3>
 <!--                                            <h4 class="subtitle"><b>Development Team</b></h4>-->
-                                            <h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> dhansuhkt787@gmail.com</h6>
-											<h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9880023870</h6>
+                                            <a class="chover" href="mailto:dhanushkt787@gmail.com"><h6 style="font-size: 15px; text-transform: lowercase; margin-top: 5px;" class="subtitle"><i class="fa fa-envelope-square"></i> dhansuhkt787@gmail.com</h6></a>
+											<a class="chover" href="tel:+919880023870"><h6 style="font-size: 15px;" class="subtitle"><i class="fa fa-phone-square"></i> 9880023870</h6></a>
                                         </div>
                                     </figcaption>
                                 </figure>

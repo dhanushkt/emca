@@ -144,7 +144,7 @@ if($gfbatch!='all' && $gftype=='all')
 										{
 										?>
                                         <tr>
-                                            <td><?php echo $getstud['usn']; ?></td>
+                                            <td><a href="student-profile.php?id=<?php echo $getstud['studid']; ?>" ><?php echo $getstud['usn']; ?></a></td>
                                             <td><?php echo $getstud['fname']." ".$getstud['lname']; ?></td>
                                             <td><?php  echo $getstud['email']; ?></td>
                                             <td><?php echo $getstud['phno']; ?></td>
@@ -195,8 +195,8 @@ if($gfbatch!='all' && $gftype=='all')
 												$events="";
 										?>
                                         <tr>
-                                            <td><?php echo $getstud2['usn']; ?></td>
-                                            <td><?php echo $getstud2['fname']." ".$getstud['lname']; ?></td>
+                                            <td><a href="student-profile.php?id=<?php echo $getstud2['studid']; ?>" ><?php echo $getstud2['usn']; ?></a></td>
+                                            <td nowrap><?php echo $getstud2['fname']." ".$getstud2['lname']; ?></td>
                                             <td><?php  echo $getstud2['talents']; ?></td>
                                             <td><?php echo $getstud2['addtalents']; ?></td>
                                             <td><?php echo $expr;  ?></td>
