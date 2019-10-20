@@ -1,10 +1,16 @@
 <?php
 include '../login/accesscontroladmin.php';
-$ausername=$_SESSION['admin'];
+$ausername=$_SESSION['ausername'];
 require('../access/connect.php');
 
-$getstudno=mysqli_query($connection, "SELECT * FROM student");
+$getstudno=mysqli_query($connection, "SELECT * FROM student student WHERE batch='2018' AND type='regular'");
 $studno=mysqli_num_rows($getstudno);
+
+$getstudno2019r=mysqli_query($connection, "SELECT * FROM student WHERE batch='2019' AND type='regular'");
+$studno19r=mysqli_num_rows($getstudno2019r);
+
+$getstudno2019l=mysqli_query($connection, "SELECT * FROM student WHERE batch='2019' AND type='lateral'");
+$studno19l=mysqli_num_rows($getstudno2019l);
 //$getfestdetails = mysqli_query( $connection,"SELECT * FROM fests WHERE fid='$fid'");
 //$getfestrow = mysqli_fetch_assoc( $getfestdetails );
 //$dateb=$getfestrow['fdate'];
@@ -120,10 +126,28 @@ $studno=mysqli_num_rows($getstudno);
 -->
                     <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
                         <div class="white-box">
-							<h3 class="box-title"><b>Students Registered</b></h3>
+							<h3 class="box-title"><b>Students 2018 Regular</b></h3>
 							<ul class="list-inline two-part">
 								<li><i class="fa fa-users text-info"></i></li>
 								<li class="text-right"><span class="counter"><?php echo $studno ?></span></li>
+							</ul>
+                        </div>
+                    </div>
+					<div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
+                        <div class="white-box">
+							<h3 class="box-title"><b>Students 2019 Regular</b></h3>
+							<ul class="list-inline two-part">
+								<li><i class="fa fa-users text-info"></i></li>
+								<li class="text-right"><span class="counter"><?php echo $studno19r ?></span></li>
+							</ul>
+                        </div>
+                    </div>
+					<div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
+                        <div class="white-box">
+							<h3 class="box-title"><b>Students 2019 Lateral</b></h3>
+							<ul class="list-inline two-part">
+								<li><i class="fa fa-users text-info"></i></li>
+								<li class="text-right"><span class="counter"><?php echo $studno19l ?></span></li>
 							</ul>
                         </div>
                     </div>

@@ -21,7 +21,7 @@
 					<!-- <li><a href="javascript:void(0)"><i class="ti-wallet"></i> My Balance</a></li>
 					<li><a href="javascript:void(0)"><i class="ti-email"></i> Inbox</a></li>
 					<li><a href="javascript:void(0)"><i class="ti-settings"></i> Account Setting</a></li> -->
-					<li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+					<li><a href="../access/logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
 				</ul>
 			</li>
 			<!-- User profile-->
@@ -69,7 +69,7 @@
 				</ul>
 			</li>-->
 		   <!---PNB Added logout menu --->
-			<li><a href="logout.php" class="waves-effect text-white"><i class="fa fa-spin fa-cog"></i> <span class="hide-menu p-l-10">BETA v 1.0</span></a></li>
+			<li><a href="#" class="waves-effect text-white"><i class="fa fa-spin fa-cog"></i> <span class="hide-menu p-l-10">BETA v 1.0</span></a></li>
 
 		</ul>
 	</div>
