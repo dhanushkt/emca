@@ -7367,7 +7367,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(85, 76, 18
     text-align: center
 }
 .lgx-speakers2 {
-    background: url(http://placehold.it/1920x1000) bottom left no-repeat fixed;
+    background: #00022D url("../img/schedule-bg-pattern.png") bottom left no-repeat fixed;
     -webkit-background-size: auto auto, cover;
     -o-background-size: auto auto, cover;
     -moz-background-size: auto auto, cover;
@@ -8703,6 +8703,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(85, 76, 18
     margin-bottom: -25rem
 }
 .lgx-registration-area .lgx-single-registration {
+	background: rgba(27,17,44,0.30);
     -moz-transition-duration: .3s;
     -webkit-transition-duration: .3s;
     -o-transition-duration: .3s;

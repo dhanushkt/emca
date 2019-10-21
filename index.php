@@ -3,6 +3,7 @@
 <html class="no-js" lang="en">
 <head>
     <?php include 'assets/csslink.php'; ?>
+	<?php include 'assets/counter.php'; ?>
 </head>
 
 <body class="home">
@@ -116,8 +117,68 @@
 
 <!--//.VIDEO END-->
 
-
-
+<section>
+        <div id="events" class="lgx-speakers lgx-speakers2">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading lgx-heading-white">
+                                <h2 class="heading">UPCOMING EVENTS</h2>
+<!--                                <h3 class="subheading"></h3>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.ROW-->
+                      <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-registration-area"> <!--lgx-registration-area2 lgx-registration-area3 "-->
+                                <div class="lgx-single-registration">
+                                    <div class="lgx-single-registration-inner">
+										<img src="assets/img/icons/22.png" width="130" height="130" alt="ticket"/>
+                                        <div class="single-top">
+                                            <h2 class="title">SAMCA Unplugged</h2>
+                                            <h4 style="margin-bottom: 0px" class="price">25<span>th</span></h4>
+											<h4 style="margin-top: 0px" class="title">October</h4>
+                                        
+											<div class="lgx-countdown-area">
+												<!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
+												<div style="font-size: 5px !important; margin-top: 10px" id="lgx-countdown" data-date="2019/10/25"></div>
+											</div>
+										
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                             
+                                <div class="lgx-single-registration">
+                                    <div class="lgx-single-registration-inner">
+										<img src="assets/img/icons/3.png" alt="ticket"/>
+                                        <div class="single-top">
+                                            <h2 class="title">Freshers Day</h2>
+                                            <h4 style="margin-bottom: 0px" class="price">25<span>th</span></h4>
+											<h4 style="margin-top: 0px" class="title">October</h4>
+                                        
+											<div class="lgx-countdown-area">
+												<!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
+												<div style="font-size: 5px !important; margin-top: 10px" id="lgx-countdown2" data-date="2019/10/25"></div>
+											</div>
+										
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.ROW-->
+           
+                </div>
+                <!-- //.CONTAINER -->
+            </div>
+            <!-- //.INNER -->
+        </div>
+    </section>
 
 <!--SCHEDULE-->
 
