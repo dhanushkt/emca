@@ -124,7 +124,7 @@ $studno19l=mysqli_num_rows($getstudno2019l);
                         </div>
                     </div>
 -->
-                    <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
+                    <div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location='view-students.php?fbatch=2018&ftype=regular'">
                         <div class="white-box">
 							<h3 class="box-title"><b>Students 2018 Regular</b></h3>
 							<ul class="list-inline two-part">
@@ -133,7 +133,7 @@ $studno19l=mysqli_num_rows($getstudno2019l);
 							</ul>
                         </div>
                     </div>
-					<div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
+					<div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location='view-students.php?fbatch=2019&ftype=regular'">
                         <div class="white-box">
 							<h3 class="box-title"><b>Students 2019 Regular</b></h3>
 							<ul class="list-inline two-part">
@@ -142,7 +142,7 @@ $studno19l=mysqli_num_rows($getstudno2019l);
 							</ul>
                         </div>
                     </div>
-					<div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location=''">
+					<div class="col-md-3 col-sm-6 hvr-float-shadow" onClick="window.location='view-students.php?fbatch=2019&ftype=lateral'">
                         <div class="white-box">
 							<h3 class="box-title"><b>Students 2019 Lateral</b></h3>
 							<ul class="list-inline two-part">

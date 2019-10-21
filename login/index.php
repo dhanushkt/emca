@@ -25,28 +25,28 @@ if (isset($_POST['username']) && isset($_POST['password']))
 			//header('Location: index.html');
 			
 		}
-		else
-		{
-			$queryc="SELECT * FROM `super_admin` WHERE (sauname='$username' OR saemail='$username') AND sapassword='$password'";
-			$resultc = mysqli_query($connection,$queryc);
-			$rowc = mysqli_fetch_assoc($resultc);
-			$countc = mysqli_num_rows($resultc);
-			if($countc==1)
-			{
-				$_SESSION['sausername'] = $rowc["sauname"];
-				// alternative redirect (die() should be there)
-				// echo "<script>location.href='target-page.php';</script>";
-				//define('BASEPATH',TRUE);
-				//<script type="text/javascript">location.href = 'newurl';</script>
-				echo'<script> window.location="../super-admin/index.php";</script>';
-				//header('Location: index.html');
-
-			}
+		//else
+		//{
+//			$queryc="SELECT * FROM `super_admin` WHERE (sauname='$username' OR saemail='$username') AND sapassword='$password'";
+//			$resultc = mysqli_query($connection,$queryc);
+//			$rowc = mysqli_fetch_assoc($resultc);
+//			$countc = mysqli_num_rows($resultc);
+//			if($countc==1)
+//			{
+//				$_SESSION['sausername'] = $rowc["sauname"];
+//				// alternative redirect (die() should be there)
+//				// echo "<script>location.href='target-page.php';</script>";
+//				//define('BASEPATH',TRUE);
+//				//<script type="text/javascript">location.href = 'newurl';</script>
+//				echo'<script> window.location="../super-admin/index.php";</script>';
+//				//header('Location: index.html');
+//
+//			}
 			else
 			{
 				$fmsg="Invalid Username/Password";
 			}	
-		}
+		//}
 		
 	}
 
