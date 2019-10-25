@@ -21,7 +21,7 @@
     <!--  FAVICON AND TOUCH ICONS -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png"/>
     <!-- this icon shows in browser toolbar -->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png"/>
     <!-- this icon shows in browser toolbar -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
