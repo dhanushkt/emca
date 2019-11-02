@@ -135,14 +135,14 @@
                             <div class="lgx-registration-area"> <!--lgx-registration-area2 lgx-registration-area3 "-->
                                 <div class="lgx-single-registration">
                                     <div class="lgx-single-registration-inner">
-										<img src="assets/img/icons/traditional-day.png" width="130" height="130" alt="ticket"/>
+										<img src="assets/img/icons/sports-day.png" width="130" height="130" alt="ticket"/>
                                         <div class="single-top">
-                                            <h1 style="font-size: 30px" class="title">TRADITIONAL DAY</h1>
-                                            <h4 style="margin-bottom: 0px" class="price">2<span>nd</span></h4>
+                                            <h1 style="font-size: 30px" class="title">SPORTS DAY</h1>
+                                            <h4 style="margin-bottom: 0px" class="price">6<span>th</span></h4>
 											<h4 style="margin-top: 0px" class="title">November</h4>
                                         
 											<div class="lgx-countdown-area">
-												<div style="font-size: 5px !important; margin-top: 10px" id="lgx-countdown" data-date="2019/11/02"></div>
+												<div style="font-size: 5px !important; margin-top: 10px" id="lgx-countdown" data-date="2019/11/06"></div>
 											</div>
 										
                                         </div>
