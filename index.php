@@ -3,11 +3,12 @@
 <html class="no-js" lang="en">
 <head>
     <?php include 'assets/csslink.php'; ?>
-	<?php include 'assets/counter.php'; ?>
+    <?php include 'assets/counter.php'; ?>
+    <link rel="stylesheet" media="screen" href="particles.js-masterdemo/css/style.css">
+
 </head>
 
 <body class="home">
-	
  <?php include 'assets/preloader.php'; ?>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -27,17 +28,20 @@
 
 <!--BANNER-->
 <section>
-    <div class="lgx-banner lgx-banner6" style="background-image: url(assets/img/bg-2.jpg);">
-        <div class="lgx-banner-style">
-            <div class="lgx-inner lgx-inner-fixed">
-                <div class="container">
+    <div class="lgx-banner lgx-banner6" style="background-image: url(assets/img/bg-2.jpg);height: 50%;" >
+    
+        <div class="lgx-banner-style" >
+            <div class="lgx-inner lgx-inner-fixed" >
+                <div class="container" >
                     <div class="row">
-                        <div class="col-xs-12">
-                            <div class="lgx-banner-info" > <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
+                        <div class="col-xs-12" >
+                            <div class="lgx-banner-info" id="particles-js"style="height: 50%; "> <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
                                 
-                                <h2 class="title">SAMCA <span><b>2</b><b>0</b><b>1</b><b>9</b></span></h2>
-								<h3 style="font-size: 30px;" class="subtitle"><span id="lgx-typed-string">where Skills Are Mastered and Competitiveness is Awarded.</span></h3>
-<!--
+                                
+                                    <h2 class="title"  id="particles-js">SAMCA <span><b>2</b><b>0</b><b>1</b><b>9</b></span></h2>
+								<h3  id="particles-js"style="font-size: 30px;" class="subtitle"><span id="lgx-typed-string">where Skills Are Mastered and Competitiveness is Awarded.</span></h3>
+                                
+                                <!--
                                 <h3 class="date"><i class="fa fa-calendar"></i> 23-27 September, 2018</h3>
                                 <h3 class="location"><i class="fa fa-map-marker"></i> 21 King Street, Dhaka 1205, Bangladesh.</h3>
                                 <div class="action-area">
@@ -51,11 +55,13 @@
                     </div>
                     <!--//.ROW-->
                 </div>
+                </div>
                 <!-- //.CONTAINER -->
+            </div>
             </div>
             <!-- //.INNER -->
         </div>
-    </div>
+    
 </section>
 <!--BANNER END-->
 
@@ -308,6 +314,12 @@
 
 
 </div>
+<!-- stats.js -->
+<!-- scripts -->
+<script src="particles.js-master/particles.js"></script>
+<script src="particles.js-master/demo/js/app.js"></script>
+<script src="particles.js-master/demo/js/lib/stats.js"></script>
+
 <?php include 'assets/jslink.php'; ?>
 	
 </body>
